@@ -1,0 +1,129 @@
+
+/*=====idは"#"、クラスは"."=====*/
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+} 
+
+header {
+  background: white;
+}
+
+.headermenu{
+  display:flex;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#contentlist li {
+    display: inline-block;
+    list-style-type: none;
+
+    width: 300%;
+    height: 100%;
+    text-align: center;
+    line-height: 350%;
+    margin-left: 0 auto;
+
+    background-color: green;
+    border-radius: 5px;
+}
+#contentlist li a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+#homebutton img{
+  width: 150px;
+  height: 50px;
+}
+
+.wrapper .container{
+  max-width:100%;
+  margin:0 auto;
+  padding: 0 1em;
+}
+
+.container{
+  display:flex;
+  height: 100%;
+}
+
+.main{
+  width: 60%;
+}
+
+.side{
+  width: 35%;
+  margin-left: 1%;   /* 左側に1%余白をとる */
+}
+
+footer{
+  margin-top: auto;
+  padding: 20px 0;
+  background: #fff;
+  text-align: center;
+}
+footer a{
+  color: black;
+  font-weight: bold;
+}
+
+.copyright p{
+  text-align: center;
+}
+
+/*===index.htmlのみ========================================*/
+.Profile{
+  height: 250px;                /* 高さ指定 */
+  border: solid 2px #000;     /* 枠線指定 */
+  background-color: white;    /* 背景色指定 */
+  border-radius: 5px;           /* 角丸指定 */
+  padding: 0px 15px 0px 15px;   /* 枠内の上右下左の余白 */
+}
+
+#icon{
+  float:left;
+  margin-right:20px;
+  width: 130px;
+  height: 130px;
+  border: solid 2px #000;       /* 枠線指定 */
+  border-radius: 100px;           /* 角丸指定 */
+}
+/*=========================================================*/
+
+@media screen and (max-width: 480px) {
+  /*
+  .headermenu #contentlist{
+    display: none; 
+  }
+  */
+  
+  .wrapper {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  .container{
+    width: 100vh;
+  }
+  #icon{
+    clear: left;
+  }
+
+  .side{
+    display: none;
+  }
+}

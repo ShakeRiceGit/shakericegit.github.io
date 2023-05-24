@@ -1,1 +1,1 @@
-# shakericegit.github.io
+# shakerice

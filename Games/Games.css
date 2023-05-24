@@ -1,0 +1,29 @@
+main{
+    display: flex;  
+}
+
+.main a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
+    margin-right:20px;   /* 右側に10px余白をとる */
+    margin-bottom:20px;   /* 右側に10px余白をとる */
+}
+
+#JumpAndClimb {
+    display: inline-block;
+    width: 200px;
+    border: solid 5px #000;     /* 枠線指定 */
+    border-radius: 10px;           /* 角丸指定 */
+    padding: 15px 15px 0px 15px;   /* 枠内の上右下左の余白 */
+}
+
+#InvaderGame {
+    display: inline-block;
+    width: 200px;
+    border: solid 5px #000;     /* 枠線指定 */
+    border-radius: 10px;           /* 角丸指定 */
+    padding: 10px 15px 0px 15px;   /* 枠内の上右下左の余白 */
+}

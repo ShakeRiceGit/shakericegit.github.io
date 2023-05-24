@@ -1,0 +1,16 @@
+#UnityRoom{
+  display: flex;
+
+  margin-right:20px;
+  border-radius: 50%;
+  width: 450px;
+  height: 100px;
+
+  border: solid 2px #000;       /* 枠線指定 */
+  border-radius: 10px;           /* 角丸指定 */
+  padding: 10px 0px 10px 10px;   /* 枠内の上右下左の余白 */
+  margin-right:10px;   /* 左側に10px余白をとる */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
