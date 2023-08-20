@@ -18,10 +18,10 @@
 	    <meta charset="utf-8"><!-- 文字化け防止の記述 -->
         <meta name="viewport" content="width=device-width,initial-scale=1"><!-- スマホ対応 -->
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
-	    <link rel="icon" type="image/png" href="../../ShakeRice_icon.png">
-        <link rel="stylesheet" href="../../index.css"><!--CSSファイルを召喚-->
-        <link rel="stylesheet" href="walk.css">
-        <title>walk</title><!-- ページのタイトルを入れます -->
+	    <link rel="icon" type="image/png" href="../../../ShakeRice_icon.png">
+        <link rel="stylesheet" href="../../../index.css"><!--CSSファイルを召喚-->
+        <link rel="stylesheet" href="CarWars.css">
+        <title>CarWars</title><!-- ページのタイトルを入れます -->
     </head><!-- ここまでがうらの設定ですよという宣言 -->
     
 
@@ -32,12 +32,12 @@
                 <nav>
                     <ul class="headermenu"><!--MENU-->
                         <div id="homebutton">
-                            <a href="../../index.html">
-                                <img src="../../header.png" alt="homebutton">
+                            <a href="../../../index.html">
+                                <img src="../../../header.png" alt="homebutton">
                             </a>
                         </div>
                         <div id="contentlist">
-                            <li><a href="../Games.html">ゲーム</a></li>
+                            <li><a href="../../Games.html">ゲーム</a></li>
                         </div>
                     </ul>
                 </nav>
@@ -45,27 +45,39 @@
 
             <div class="container">
                 <div class = "main">
-                    <h2>walk</h2><!-- 見出し2 -->
+                    <h2>CarWars</h2><!-- 見出し2 -->
                     <div id="contentImgs">
-                        <img width="300" src="walk.png" alt="gameimage">
+                        <img width="300" src="CarWars_game1.png" alt="gameimage1">
+                        <img width="300" src="CarWars_game2.png" alt="gameimage2">
+                        <img width="300" src="CarWars_game3.png" alt="gameimage3">
+                        <img width="300" src="CarWars_game4.png" alt="gameimage4">
+                        <img width="300" src="CarWars_game5.png" alt="gameimage5">
                     </div>
                     <h3>基本操作：</h3>
-                        <p>移動：矢印キー(↑↓←→)</p>
+                        <p>マウスで視点移動<br>
+                            前進：W<br>
+                            後退：S<br>
+                            ハンドル操作：A(左)とD(右)<br>
+                            ジャンプ：スペース<br>
+                            加速：LeftShift<br>
+                            <br>
+                            発射：左クリック<br>
+                            AIM：右クリック<br>
+                            リロード：R<br>
+                            <br>
+                            メニューを表示/非表示：Escape(Esc)<br>
+                            スコアボードを表示/非表示：Tab
+                            </p>
                     <h3>ルール説明：</h3>
-                        <p>岩をよけながら進んでいく耐久ゲーム。<br>
-                            花をとると+10点<br>
-                            画面左の外側に出されるとゲームオーバー。<br>
+                        <p>制限時間内に銃を使って戦うFFA方式のゲーム<br>
+                            他プレイヤーを倒すと＋１点<br>
                         </p>
-                        
-                    <a id="link" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/walk" target="_blank">
+                    <a id="link" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/CarWars" target="_blank">
                         <h2>ゲームをダウンロード</h2>
                         <p>※別タブでGithubが開きます</p>
                     </a>
-
-                    <h3>発生しているバグ一覧：</h3>
-                        <li>画面外(上右下)に出れる。</li>
-                        <li>花をとった際に2,30点ほど加算される時がある。</li>
-
+                    <h3>発生している不具合一覧：</h3>
+                        <li>セルフキルをすると自分に＋１点される。</li>
                     <h2>作品について：</h2>
                     <p>2019年(プログラミング初めて2年目くらい)に制作したゲームです。<br>
                     自分の成長を見てもらいたかったため、全くそのままの状態で配布することにしました。<br>
@@ -85,7 +97,7 @@
                 </div>
             </div>
             <footer>
-                <a href="../../Privacy/Privacy.html">プライバシーポリシー</a>
+                <a href="../../../Privacy/Privacy.html">プライバシーポリシー</a>
                 <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
                 <div class="copyright">
                     <p>Copyright © 2021 ShakeRice inc. All Rights Reserved.</p>
