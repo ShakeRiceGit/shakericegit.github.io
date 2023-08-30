@@ -28,18 +28,10 @@
     <body><!-- ここからページに表示される内容ですよという宣言 -->
         <div class="wrapper">
             <header>
-                <nav>
-                    <ul class="headermenu"><!--MENU-->
-                        <div id="homebutton">
-                            <a href="../../index.html">
-                                <img src="../../header.png" alt="homebutton">
-                            </a>
-                        </div>
-                        <div id="contentlist">
-                            <li><a href="../Games.html">ゲーム</a></li>
-                        </div>
-                    </ul>
-                </nav>
+                <ul id="headermenu"><!--MENU-->
+                    <li><a href="../../index.html">ホーム</a></li>
+                    <li><a href="../Games.html">ゲーム</a></li>
+                </ul>
             </header>
 
             <div class="container">
@@ -113,9 +105,11 @@
             </div>
 
             <footer>
-                <a href="Privacy/Privacy.html">プライバシーポリシー</a>
-                <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
-                <div class="copyright">
+                <div id="content">
+                    <a href="../../Privacy/Privacy.html">プライバシーポリシー</a>
+                    <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
+                </div>
+                <div id="copyright">
                     <p>Copyright © 2021 ShakeRice inc. All Rights Reserved.</p>
                 </div>
             </footer>

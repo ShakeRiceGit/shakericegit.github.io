@@ -1,74 +1,73 @@
-
-.wrapper {
-  max-width: 960px;
-  height: 100vh;
+header{
+  width: 75%;
   margin: 0 auto;
-} 
+}
 
-.container{
+header #headermenu{
   display:flex;
 }
-
-header {
-  background: white;
-}
-
-.headermenu{
-  display:flex;
-  
-}
-#contentlist li {
+header #headermenu li {
   display: inline-block;
-
-  width: 300%;
-  height: 100%;
+  min-width: 200px;
+  min-height: 50px;
   
-  line-height: 350%;
   background-color: green;
   border-radius: 5px;
+
+  margin:2px;
 }
-#contentlist li a{
+header #headermenu li a{
   display: block;
+  line-height: 3; /*３等分*/
   text-align: center;
   text-decoration: none;
-  color: #fff;
   font-weight: bold;
+  color: #fff;
 }
 
-#homebutton img{
-  width: 150px;
-  height: 50px;
+.container{
+  width: 75%;
+  display:flex;
+  margin: 0 auto;
 }
 
 .main{
-  width: 65%;
-  min-height: 75vh;
-  padding: 10px;
+  margin-left: 0;
+  margin-right: auto;
+  width: 70%;
 }
 
 .side{
-  width: 35%;
+  margin-right: 0;
+  margin-left: auto;
+  width: 30%;
+  height: auto;
 }
 
 footer{
-  padding: 20px 0;
-  background: #fff;
-  text-align: center;
+  width: 100%;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  text-align: center; /*中央に固定*/
 }
 footer a{
   color: black;
   font-weight: bold;
 }
 
-.copyright p{
-  text-align: center;
+footer #copyright p{
+  color: black;
 }
 
-@media screen and (max-width: 900px) {
-  .wrapper {
-    max-width: 480px;
+/*スクリーン半分*/
+@media screen and (max-width: 1000px) {
+  .container{
+    width: 90%;
   }
-  
+}
+
+/*スマホ*/
+@media screen and (max-width: 480px) {
   .container{
     width: 100%;
   }

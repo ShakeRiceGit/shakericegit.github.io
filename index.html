@@ -26,24 +26,16 @@
 
     <body><!-- ここからページに表示される内容ですよという宣言 -->
         <div class="wrapper">
-            <header>
-                <nav>
-                    <ul class="headermenu"><!--MENU-->
-                        <div id="homebutton">
-                            <a href="index.html">
-                                <img src="header.png" alt="homebutton">
-                            </a>
-                        </div>
-                        <div id="contentlist">
-                            <li><a href="Games/Games.html">ゲーム</a></li>
-                        </div>
-                    </ul>
-                </nav>
+            <header>   
+                <ul id="headermenu"><!--MENU-->
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="Games/Games.html">ゲーム</a></li>
+                </ul>
             </header>
 
             <div class="container">
                 <div class="main">
-                    <div class="Profile">
+                    <div id="Profile">
                         <h2>プロフィール：</h2>
                         <img id="icon" src="./ShakeRice_icon.png" alt="ShakeRice_icon">
                         <p>
@@ -56,7 +48,7 @@
                 </div>
                 <div class="side">
                     <a class="twitter-timeline"
-                            data-width="350" data-height="350"
+                            data-width="350%" data-height="350%"
                             data-theme="dark"
                             href="https://twitter.com/SR_Shake_Rice?ref_src=twsrc%5Etfw">
                             Tweets by SR_Shake_Rice
@@ -67,12 +59,15 @@
             </div>
 
             <footer>
-                <a href="Privacy/Privacy.html">プライバシーポリシー</a>
-                <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
-                <div class="copyright">
+                <div id="content">
+                        <a href="Privacy/Privacy.html">プライバシーポリシー</a>
+                        <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
+                </div>
+                <div id="copyright">
                     <p>Copyright © 2021 ShakeRice inc. All Rights Reserved.</p>
                 </div>
             </footer>
+
         </div>
     </body><!-- ここまでがページに表示される内容ですよという宣言 -->
 </html><!-- ここまでがHTMLですという終わりの宣言 -->
