@@ -8,7 +8,7 @@ header #headermenu{
 }
 header #headermenu li {
   display: inline-block;
-  min-width: 200px;
+  min-width: 100px;
   min-height: 50px;
   
   background-color: green;
