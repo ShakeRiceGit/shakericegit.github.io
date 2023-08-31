@@ -26,8 +26,9 @@ header #headermenu li a{
 }
 
 .container{
+  display: flex;
+  min-height: 100vh;
   width: 75%;
-  display:flex;
   margin: 0 auto;
 }
 
@@ -46,8 +47,6 @@ header #headermenu li a{
 
 footer{
   width: 100%;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
   text-align: center; /*中央に固定*/
 }
 footer a{
