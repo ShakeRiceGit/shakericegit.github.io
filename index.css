@@ -19,7 +19,7 @@ header #headermenu li {
 }
 header #headermenu li a{
   display: block;
-  line-height: 3; /*３等分*/
+  line-height: 3; /*３分の１*/
   text-align: center;
   text-decoration: none;
   font-weight: bold;
