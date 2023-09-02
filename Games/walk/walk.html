@@ -20,7 +20,6 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
 	    <link rel="icon" type="image/png" href="../../ShakeRice_icon.png">
         <link rel="stylesheet" href="../../index.css"><!--CSSファイルを召喚-->
-        <link rel="stylesheet" href="walk.css">
         <title>walk</title><!-- ページのタイトルを入れます -->
     </head><!-- ここまでがうらの設定ですよという宣言 -->
     
@@ -40,30 +39,37 @@
                 <div id="contentImgs">
                     <img width="300" src="walk.png" alt="gameimage">
                 </div>
-                <h3>基本操作：</h3>
+                <div id="control">
+                    <h3>基本操作：</h3>
                     <p>移動：矢印キー(↑↓←→)</p>
-                <h3>ルール説明：</h3>
+                    
+                </div>
+                <div id="rule">
+                    <h3>ルール説明：</h3>
                     <p>岩をよけながら進んでいく耐久ゲーム。<br>
                         花をとると+10点<br>
                         画面左の外側に出されるとゲームオーバー。<br>
                     </p>
-                    
-                <a id="link" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/walk" target="_blank">
-                    <h2>ゲームをダウンロード</h2>
-                    <p>※別タブでGithubが開きます</p>
-                </a>
-
-                <h3>発生しているバグ一覧：</h3>
-                    <li>画面外(上右下)に出れる。</li>
-                    <li>花をとった際に2,30点ほど加算される時がある。</li>
-
-                <h2>作品について：</h2>
-                <p>2019年(プログラミング初めて2年目くらい)に制作したゲームです。<br>
-                自分の成長を見てもらいたかったため、全くそのままの状態で配布することにしました。<br>
-                設計もめちゃくちゃでバグだらけですが、そのあたりはご愛嬌ということで。
-                </p>
+                </div>
+                <div id="download">
+                    <h3>Download:</h3>
+                    <a href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/walk" target="_blank">
+                        <img width="10%" src="../../Images/github-mark.svg" alt="githubIcon">
+                    </a>
+                </div>
+                <div id="bugs">
+                    <h3>発生しているバグ一覧：</h3>
+                        <li>画面外(上右下)に出れる。</li>
+                        <li>花をとった際に2,30点ほど加算される時がある。</li>
+                </div>
+                <div id="comment">
+                    <h3>作品について：</h3>
+                    <p>2019年(プログラミング初めて2年目くらい)に制作したゲームです。<br>
+                    自分の成長をアピールするため、コード含めて全くそのままの状態で配布することにしました。<br>
+                    設計もめちゃくちゃでバグだらけですが、そのあたりはご愛嬌ということで。
+                    </p>
+                </div>
             </div>
-
             <div class="side">
                 <a class="twitter-timeline"
                     data-width="350" data-height="350"
@@ -78,7 +84,7 @@
         <footer>
             <a href="../../Privacy/Privacy.html">プライバシーポリシー</a>
             <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
-            <div class="copyright">
+            <div id="copyright">
                 <p>Copyright © 2021 ShakeRice inc. All Rights Reserved.</p>
             </div>
         </footer>

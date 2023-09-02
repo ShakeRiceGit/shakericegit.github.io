@@ -1,21 +1,17 @@
-main{
-    display: flex;  
-}
+#games a{
+    display: inline-block;
 
-.main a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     text-align: center;
 
-    margin-right:20px;   /* 右側に10px余白をとる */
-    margin-bottom:20px;   /* 右側に10px余白をとる */
-}
+    width: 40%;
+    height: 40%;
 
-.myGames a{
-    display: inline-block;
-    width: 200px;
-    border: solid 5px #000;     /* 枠線指定 */
+    border: solid 5px black;     /* 枠線指定 */
     border-radius: 10px;           /* 角丸指定 */
-    padding: 10px 15px 0px 15px;   /* 枠内の上右下左の余白 */
+    
+    margin: 0px 5px 5px 0px;   /* 枠内の上右下左の余白 */
+    padding: 5px 5px 5px 5px;
 }

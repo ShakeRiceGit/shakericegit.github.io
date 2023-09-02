@@ -47,16 +47,20 @@ header #headermenu li a{
 }
 
 footer{
+  background-color: rgb(75, 75, 75);
+  padding: 15px 0px 10px 0px;
+
   width: 100%;
   text-align: center; /*中央に固定*/
 }
 footer a{
-  color: black;
+  color: white;
+  text-decoration:none ;
   font-weight: bold;
 }
 
 footer #copyright p{
-  color: black;
+  color: white;
 }
 
 /*スクリーン半分*/

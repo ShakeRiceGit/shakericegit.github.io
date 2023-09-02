@@ -20,7 +20,6 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
 	    <link rel="icon" type="image/png" href="../../ShakeRice_icon.png">
         <link rel="stylesheet" href="../../index.css"><!--CSSファイルを召喚-->
-        <link rel="stylesheet" href="InvaderGame.css">
         <title>InvaderGame</title><!-- ページのタイトルを入れます -->
     </head><!-- ここまでがうらの設定ですよという宣言 -->
     
@@ -41,23 +40,34 @@
                         <img width="230" src="title.png" alt="title">
                         <img width="280" src="invadergame.png" alt="gameimage">
                     </div>
-                    <h3>基本操作：</h3>
+
+                    <div id="control">
+                        <h3>基本操作：</h3>
                         <p>移動：A,Dキー または 矢印キー（←→）<br>
                         弾の発射：スペースキー<br>
                         ゲームをやめる：Escキー<br>
                         <br>
                         難易度の設定：矢印キー（↑↓）※タイトル時のみ
-                    </p>
-                    <p>ルール説明：<br>
-                        インベーダーたちを全て倒せ！！！<br>
-                        <br>
-                        タイトル画面で矢印キー（↑↓）を押すと、最高８レベルまで設定を変えることができます。
-                    </p>
-
-                    <a id="link" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/InvaderGame" target="_blank">
-                        <h2>ゲームをダウンロード</h2>
-                        <p>※別タブでGithubが開きます</p>
-                    </a>
+                        </p>
+                    </div>
+                    <div id="rule">
+                        <h3>ルール説明：</h3>                     
+                        <p>インベーダーたちを全て倒せ！！！<br>
+                            タイトル画面で矢印キー（↑↓）を押すと、最高８レベルまで設定を変えることができます。</p>
+                    </div>
+                    <div id="download">
+                        <h3>Download:</h3>
+                        <a  href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/InvaderGame" 
+                            target="_blank">
+                            <img width="10%" src="../../Images/github-mark.svg" alt="githubIcon">
+                            </a>
+                    </div>
+                    <div id="comment">
+                        <h3>作品について:</h3>
+                        <p>2022年に半年近くかけて初めてゲームエンジンなしで作ったゲームです。<br>
+                            1年後くらいに改めてコードを見てみるとあまりにも酷すぎて、半年かかったとはいえよく完成させたなwと昔の自分を思わず褒めたくなるなる作品です。
+                        </p>
+                    </div>
                 </div>
                 <div class="side">
                     <a class="twitter-timeline"
