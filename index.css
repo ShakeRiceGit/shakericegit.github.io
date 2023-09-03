@@ -4,10 +4,14 @@ header{
   margin: 0 auto;
 }
 
-header #headermenu{
+header #mobileMenu{
+  display: none;
+}
+
+#desktopMenu ul{
   display:flex;
 }
-header #headermenu li {
+#desktopMenu ul li {
   display: inline-block;
   min-width: 100px;
   min-height: 50px;
@@ -17,7 +21,7 @@ header #headermenu li {
 
   margin:2px;
 }
-header #headermenu li a{
+#desktopMenu ul li a{
   display: block;
   line-height: 3; /*３分の１*/
   text-align: center;
@@ -72,6 +76,15 @@ footer #copyright p{
 
 /*スマホ*/
 @media screen and (max-width: 480px) {
+
+  header #desktopMenu{
+    display: none;
+  }
+
+  header #mobileMenu{
+    display: block;
+  }
+
   .container{
     width: 100%;
   }

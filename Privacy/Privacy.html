@@ -20,15 +20,38 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- ややこしいので無視してOK -->
         <link rel="icon" type="image/png" href="../ShakeRice_icon.png">
         <link rel="stylesheet" href="../index.css"><!--CSSファイルを召喚-->
+        <link rel="stylesheet" href="../mobile-menu.css">
 	    <title>プライバシーポリシー</title><!-- ページのタイトルを入れます -->
     </head><!-- ここまでがうらの設定ですよという宣言 -->
     
     <body><!-- ここからページに表示される内容ですよという宣言 -->
         <header>
-            <ul id="headermenu"><!--MENU-->
-                <li><a href="../index.html">ホーム</a></li>
-                <li><a href="../Games/Games.html">ゲーム</a></li>
-            </ul>
+            <div id="mobileMenu">
+                <nav>
+                    <div class="inner">
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../Games/Games.html">Games</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            
+                <div class="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            
+                <div id="mask"></div>
+            </div>
+            <script src="../mobile-menu.js"></script>
+
+            <div id="desktopMenu">
+                <ul><!--MENU-->
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../Games/Games.html">Games</a></li>
+                </ul>
+            </div>
         </header>
 
         <div class="container">
