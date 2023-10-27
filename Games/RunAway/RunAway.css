@@ -1,0 +1,21 @@
+#Play{
+  width: auto;
+  display: flex;
+}
+
+#UnityRoom img{
+  width: 75%;
+
+  border: 5px solid black;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+}
+
+#GooglePlay img {
+  width: 75%;
+}
+
+#Version details{
+  margin-bottom: 1%;
+  cursor: pointer
+}
