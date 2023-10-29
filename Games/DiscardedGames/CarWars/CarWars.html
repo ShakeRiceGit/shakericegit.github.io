@@ -27,63 +27,86 @@
 
     
     <body><!-- ここからページに表示される内容ですよという宣言 -->
-        <div class="wrapper">
-            <header>
+        <header>
+            <div id="mobileMenu">
                 <nav>
-                    <ul class="headermenu"><!--MENU-->
-                        <div id="homebutton">
-                            <a href="../../../index.html">
-                                <img src="../../../header.png" alt="homebutton">
-                            </a>
-                        </div>
-                        <div id="contentlist">
-                            <li><a href="../../Games.html">ゲーム</a></li>
-                        </div>
-                    </ul>
+                    <div class="inner">
+                        <ul>
+                            <li><a href="../../../index.html">Home</a></li>
+                            <li><a href="../../Games.html">Games</a></li>
+                        </ul>
+                    </div>
                 </nav>
-            </header>
+            
+                <div class="toggle-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            
+                <div id="mask"></div>
+            </div>
+            <script src="../../mobile-menu.js"></script>
+    
+            <div id="desktopMenu">
+                <ul><!--MENU-->
+                    <li><a href="../../../index.html">Home</a></li>
+                    <li><a href="../../Games.html">Games</a></li>
+                </ul>
+            </div>
+        </header>
 
             <div class="container">
-                <div class = "main">
-                    <h2>CarWars</h2><!-- 見出し2 -->
+                <div class="main">
+                    <h1>CarWars</h1><!-- 見出し2 -->
                     <div id="contentImgs">
-                        <img width="300" src="CarWars_game1.png" alt="gameimage1">
-                        <img width="300" src="CarWars_game2.png" alt="gameimage2">
-                        <img width="300" src="CarWars_game3.png" alt="gameimage3">
-                        <img width="300" src="CarWars_game4.png" alt="gameimage4">
-                        <img width="300" src="CarWars_game5.png" alt="gameimage5">
+                        <img width="300" src="game1.png" alt="game1">
+                        <img width="300" src="game2.png" alt="game2">
+                        <img width="300" src="game3.png" alt="game3">
+                        <img width="300" src="game4.png" alt="game4">
+                        <img width="300" src="game5.png" alt="game5">
                     </div>
-                    <h3>基本操作：</h3>
-                        <p>マウスで視点移動<br>
-                            前進：W<br>
-                            後退：S<br>
-                            ハンドル操作：A(左)とD(右)<br>
-                            ジャンプ：スペース<br>
-                            加速：LeftShift<br>
-                            <br>
-                            発射：左クリック<br>
-                            AIM：右クリック<br>
-                            リロード：R<br>
-                            <br>
-                            メニューを表示/非表示：Escape(Esc)<br>
-                            スコアボードを表示/非表示：Tab
-                            </p>
-                    <h3>ルール説明：</h3>
-                        <p>制限時間内に銃を使って戦うFFA方式のゲーム<br>
-                            他プレイヤーを倒すと＋１点<br>
+                    <div id="Control">
+                        <h3>操作方法：</h3>
+                        <p>
+                            W:アクセル S:バック<br>
+                            AD:ハンドル<br>
+                            LeftShift:ダッシュ<br>
+                            Space:ジャンプ<br>
+                            左クリック:発射<br>
+                            右クリック:ADS<br>
+                            R:リロード<br>
+                            Tab:スコアボード<br>
+                            Esc:メニュー<br>
                         </p>
-                    <a id="link" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/CarWars" target="_blank">
-                        <h2>ゲームをダウンロード</h2>
-                        <p>※別タブでGithubが開きます</p>
-                    </a>
-                    <h3>発生している不具合一覧：</h3>
-                        <li>セルフキルをすると自分に＋１点される。</li>
-                    <h2>作品について：</h2>
-                    <p>2019年(プログラミング初めて2年目くらい)に制作したゲームです。<br>
-                    自分の成長を見てもらいたかったため、全くそのままの状態で配布することにしました。<br>
-                    設計もめちゃくちゃでバグだらけですが、そのあたりはご愛嬌ということで。
-                    </p>
+                    </div>  
+                    <div id="rule">
+                        <h3>ゲームルール:</h3>
+                        <p>
+                            一番多くの敵を倒した人が勝ち、というFFA形式のゲーム。
+                        </p>
+                    </div>
+                    <div id="download">
+                        <h3>Download:</h3>
+                        <a  href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/CarWars" 
+                            target="_blank">
+                            <img width="10%" src="../../../General/image/github-mark.svg" alt="githubIcon">
+                            </a>
+                    </div>
+                    <div id="Comment">
+                        <h3>コメント:</h3>
+                        <p>
+                            2022年11月まで半年近くかけて作っていたゲーム。<br>
+                            2Dゲームが作れたし、今度は3Dゲームもつくれるやろ！という生半可な気持ちで超大作を制作しようとしたため地獄を見た上に、最終的にデータが吹っ飛んでメンタルブレイク。(マジで立ち直るのに時間かかったよ...)<br>
+                            なんとか最終ビルドのデータがGoogleDriveに残っていたのが救いだが、テクスチャが壊れていたりしてます...<br>
+                            みんなもデータのバックアップはきちんととっておこうね！<br>
+                            ちなみに今はクラウド&ローカルHDDへの二重バックアップへ進化していますw
+                            <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">進展です。<br>検査結果はデータ復旧不能となりました。<br>もうデータの救出は半ば諦めていますが、最後の望みをかけて自分でもう少し何とかできないか探ってみようと思います。<a href="https://twitter.com/hashtag/PC?src=hash&amp;ref_src=twsrc%5Etfw">#PC</a> <a href="https://twitter.com/hashtag/PC%E3%82%A8%E3%82%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#PCエコサービス</a> <a href="https://twitter.com/hashtag/HDD?src=hash&amp;ref_src=twsrc%5Etfw">#HDD</a> <a href="https://twitter.com/hashtag/%E3%83%87%E3%83%BC%E3%82%BF%E5%BE%A9%E6%97%A7?src=hash&amp;ref_src=twsrc%5Etfw">#データ復旧</a> <a href="https://t.co/SHLT8Uzm00">https://t.co/SHLT8Uzm00</a> <a href="https://t.co/bQGVqxOeXW">pic.twitter.com/bQGVqxOeXW</a></p>&mdash; ShakeRice@ゲーム制作 (@SR_Shake_Rice) <a href="https://twitter.com/SR_Shake_Rice/status/1590660064217796608?ref_src=twsrc%5Etfw">November 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </p>
+                    </div>
                 </div>
+
+                
 
                 <div class="side">
                     <a class="twitter-timeline"
@@ -96,13 +119,15 @@
                     </a>
                 </div>
             </div>
+
             <footer>
-                <a href="../../../Privacy/Privacy.html">プライバシーポリシー</a>
-                <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
-                <div class="copyright">
+                <div id="content">
+                    <a href="../../../Privacy/Privacy.html">プライバシーポリシー</a>
+                    <a href="https://forms.gle/Jmf64QbWf9WNzM51A" target="_blank">お問い合わせ</a>
+                </div>
+                <div id="copyright">
                     <p>Copyright © 2021 ShakeRice inc. All Rights Reserved.</p>
                 </div>
             </footer>
-        </div>
     </body><!-- ここまでがページに表示される内容ですよという宣言 -->
 </html><!-- ここまでがHTMLですという終わりの宣言 -->
