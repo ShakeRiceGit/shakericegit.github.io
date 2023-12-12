@@ -1,0 +1,143 @@
+.container_profile{
+    margin: 40px 10px 0;
+}
+@media screen and (max-width: 480px) {
+.container_profile .profile_block{
+    display: block;
+}}
+
+.profile_block .profile{
+    display: flex;
+}
+@media screen and (max-width: 480px) {
+.profile_block .profile{
+    display: block;
+}}
+
+.profile_block .profile_title{
+    margin: 0 auto;
+    max-width: 200px;
+    background: #a5c264;
+    color: white;
+
+    transform: skew(-15deg);
+}
+
+.profile_block .profile_title h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size:  24px;
+    padding: 10px 0px 8px;
+
+    transform: skew(15deg);
+}
+@media screen and (max-width: 480px) {
+.profile_block h2{
+    width: 100%;
+    
+}}
+
+.profile_block .icon{
+    max-width: 20%;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+.profile_block .icon img{
+    max-width: 100%;
+    border-radius: 50%;
+    border: solid 4px #000000;
+}
+
+.profile .profile_description{
+    margin: 20px 20px 0;
+    font-size: 18px;
+}
+
+.container_profile .SNS{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.container_profile .SNS a .SNSicon{
+    max-width: 50px;
+    margin: 0 10px 0;
+}
+
+.container_games{
+    padding-top: 50px;
+}
+
+.container_games .games_title{
+    max-width: 175px;
+    background: #59b4c2;
+    color: #fff;
+    margin: 0 auto;
+
+    transform: skew(-15deg);
+}
+
+.container_games .games_title h2{
+    text-align: center;
+    font-weight: bold;
+    font-size:  24px;
+    padding: 10px 0px 8px;
+    
+    transform: skew(15deg);
+}
+
+.container_games .games_block{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between
+}
+@media screen and (max-width: 480px){
+    .container_games .games_block{
+        max-width: 250px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+
+/*最後の行のコンテンツを左寄せにする*/
+@media screen and (min-width: 480px){
+    .container_games .games_block::before{
+        content:"";
+        display: block;
+        width: 23%;
+        order:1;
+    }
+    .container_games .games_block::after{
+        content:"";
+        display: block;
+        width: 23%;
+    }
+}
+
+.container_games .game{
+    text-align: center;
+    max-width: 200px;
+    margin: 30px 20px 40px;
+}
+
+
+
+.container_games .game img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.container_games .game .title{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.container_games .game a{
+    background: #59b4c2;
+    color: #fff;
+    padding: 15px 20px 15px;
+}

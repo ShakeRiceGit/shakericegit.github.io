@@ -1,0 +1,164 @@
+.container{
+    padding: 0 20px 0;
+}
+
+.main_block {
+    width: 100%; /* ブロックの幅を設定 */
+    margin: 50px auto; /* ブロックを中央に配置 */
+    background-color: #efefef;
+    padding: 20px;
+}
+
+.main_block h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main_block .game_icon {
+    float: right;
+    height: 150px; /* アイコンの高さを設定 */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: -35px;
+}
+
+.play h2{
+    font-size: 20px;
+}
+
+.play .links {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+}
+
+.play .links a{
+    margin-right: 10px;
+}
+
+.play .links a img{
+    width: 200px;
+}
+
+.play .links a .platform-name{
+    text-align: center;
+}
+
+.links #UnityRoom img{
+    padding: 5px;
+    margin: 10px 0 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.container .imgs{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .imgs img{
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.container .about{
+    margin-top: 20px;
+}
+
+.about h2{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.about p{
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.container .info{   
+    display: flex;
+}
+@media screen and (max-width: 480px) {
+    .container .info{
+        display: block;
+    }
+}
+
+.container .info div{
+    margin-top: 20px;
+}
+
+.container .info .info_left{
+    width: 50%;
+    padding-right: 10px;
+}
+@media screen and (max-width: 480px) {
+    .container .info .info_left{
+        width: 100%;
+    }
+}
+
+
+.info_left h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info_left .release details summary{
+    margin-top: 0.5rem;
+    cursor: pointer;
+    background-color: #dfdfdf;
+    padding: 5px 10px 5px;
+}
+
+.release details summary{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.release details ul{
+    list-style: disc;
+    margin-top: 0.5rem;
+    padding-left: 40px;
+}
+
+.container .info_right{
+    width: 50%;
+    padding-left: 10px;
+}
+@media screen and (max-width: 480px) {
+    .container .info .info_right{
+        width: 100%;
+    }
+}
+
+
+.info_right .credit h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.credit h4{
+    font-size: 20px;
+}
+
+.credit ul{
+    margin-top: 10px;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.credit ul li{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.credit ul li p a{
+    text-decoration: underline;
+}
