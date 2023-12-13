@@ -10,8 +10,6 @@
 }
 
 .main_block h1 {
-    font-size: 24px;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -21,10 +19,6 @@
     object-fit: cover;
     border-radius: 10px;
     margin-top: -35px;
-}
-
-.play h2{
-    font-size: 20px;
 }
 
 .play .links {
@@ -69,14 +63,8 @@
     margin-top: 20px;
 }
 
-.about h2{
-    font-size: 24px;
-    font-weight: bold;
-}
-
 .about p{
     margin-top: 10px;
-    font-size: 18px;
 }
 
 .container .info{   
@@ -104,8 +92,6 @@
 
 
 .info_left h3{
-    font-size: 16px;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 

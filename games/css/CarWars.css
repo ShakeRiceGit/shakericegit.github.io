@@ -57,6 +57,6 @@
 }
 
 .container .imgs img{
-    max-width: 420px;
+    max-width: 100%;
     margin-top: 20px;
 }
