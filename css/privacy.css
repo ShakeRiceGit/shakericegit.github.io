@@ -1,0 +1,39 @@
+.pp_title{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.container .pp_title h2 {
+    font-weight: bold;
+    font-size:  28px;
+    margin: 20px 0 20px;
+    position: relative;
+    display: inline-block;
+    padding: 0 55px;
+}
+
+.pp_title h2:before, .pp_title h2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    width: 45px;
+    height: 1px;
+    background-color: black;
+}
+
+.pp_title h2:before {
+    left:0;
+}
+.pp_title h2:after {
+    right: 0;
+}
+
+.container .text-box{
+    font-size: 20px;
+    margin: 30px 20px 0;
+}
+
+.text-box ol li{
+    margin-bottom: 1em;
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+h1, h2, h3, h4 { font-weight: bold; }
+
+h1{ font-size: xx-large;}
+h2{ font-size: x-large;}
+h3{ font-size: large;}
+
+p{ font-size: 18px; }
+
+body{
+    font-family: YakuHanJPs, Roboto, "Hiragino Kaku Gothic ProN", Arial, nc3Jp, sans-serif !important;
+    border-top:  10px solid #a5c264;
+}
+
+header .logo {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+header .logo img {
+    display: inline-block;
+    max-width: 25%;
+    margin-bottom:  5px;
+}
+
+.w_inner {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+    
+
+
+header nav ul{
+    display: flex;
+    margin: 0 20px 0;
+}
+
+header nav ul li{
+    width: 50%;
+    text-align: center;
+    border-right: 2px solid #ddd;
+    padding: 5px 0 5px;
+}
+
+/*最初のリストだけ左にボーダーをつける*/
+header nav ul li:first-child{
+    border-left: 2px solid #ddd;
+}
+
+header nav ul li a{
+    display: block;
+}
+
+footer{
+    margin-top: 40px;
+}
+
+.pp_link{
+    text-align: right;
+    margin-bottom: 10px;
+    
+}
+
+.pp_link:hover{
+    text-decoration: underline;
+}
+
+.footer_bar{
+    background: #a5c264;
+}
+
+.copy{
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    padding:  7px 0 3px;
+}
