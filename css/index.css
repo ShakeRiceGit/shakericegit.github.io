@@ -8,6 +8,8 @@ h3{ font-size: large;}
 
 p{ font-size: 18px; }
 
+img { max-width: 100%;}
+
 body{
     font-family: YakuHanJPs, Roboto, "Hiragino Kaku Gothic ProN", Arial, nc3Jp, sans-serif !important;
     border-top:  10px solid #a5c264;
@@ -60,6 +62,7 @@ footer{
 
 .pp_link{
     text-align: right;
+    padding-right: 15px;
     margin-bottom: 10px;
     
 }
