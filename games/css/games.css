@@ -1,0 +1,13 @@
+#control table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#control table th,table td{
+    padding : 10px 10px;
+}
+
+#control table tr:nth-child(odd){
+    background-color: #eee
+}

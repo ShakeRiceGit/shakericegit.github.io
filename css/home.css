@@ -16,7 +16,7 @@
 
 .profile_block .profile_title{
     margin: 0 auto;
-    max-width: 200px;
+    width: 300px;
     background: #a5c264;
     color: white;
 
@@ -38,7 +38,7 @@
 }}
 
 .profile_block .icon{
-    max-width: 20%;
+    width: 20%;
     padding-top: 20px;
     margin: 0 auto;
 }
@@ -54,22 +54,12 @@
     font-size: 18px;
 }
 
-.container_profile .SNS{
-    margin-top: 20px;
-    text-align: center;
-}
-
-.container_profile .SNS a .SNSicon{
-    max-width: 50px;
-    margin: 0 10px 0;
-}
-
 .container_games{
     padding-top: 50px;
 }
 
 .container_games .games_title{
-    max-width: 175px;
+    width: 300px;
     background: #59b4c2;
     color: #fff;
     margin: 0 auto;
