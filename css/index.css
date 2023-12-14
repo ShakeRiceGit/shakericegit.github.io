@@ -75,9 +75,19 @@ footer{
     background: #a5c264;
 }
 
+.footer_bar .SNS{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.footer_bar .SNS a .SNSicon{
+    max-width: 50px;
+    margin: 0 10px 0;
+}
+
 .copy{
     text-align: center;
     color: #fff;
     font-size: 12px;
-    padding:  7px 0 3px;
+    padding:  10px 0 10px;
 }
