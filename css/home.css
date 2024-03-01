@@ -1,6 +1,4 @@
-.container_profile{
-    margin: 40px 10px 0;
-}
+
 @media screen and (max-width: 480px) {
 .container_profile .profile_block{
     display: block;
