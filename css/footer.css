@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+footer{
+    background: #3A894B;
+}
+
+#innerFooter{
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.SNS{
+    padding: 10px;
+}
+
+.SNS a .SNSicon{
+    max-width: 50px;
+    margin: 0 10px 0;
+}
+
+.footerMenu{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    color: #fff;
+}
+
+.footerMenu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 480px) {
+    .footerMenu ul{
+        display: block;
+    }
+}
+
+.footerMenu ul li{
+    width: 33%;
+}
+@media screen and (max-width: 480px) {
+    .footerMenu ul li{
+        width: 100%;
+    }
+}
+
+.copy{
+    color: #fff;
+    font-size: 12px;
+    padding:  10px 0 10px;
+}

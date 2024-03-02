@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+h1, h2, h3, h4 { font-weight: bold; }
+
+h1{ 
+    font-size: xx-large;
+    margin: 20px 0 10px;
+}
+
+h2{
+    font-size: x-large;
+    margin: 20px 0 10px;
+}
+
+h3{ 
+    font-size: large;
+    margin: 20px 0 10px;
+}
+
+p{ 
+    font-size: 18px; 
+}
+
+img { max-width: 100%;}
+
+body{
+    font-family: YakuHanJPs, Roboto, "Hiragino Kaku Gothic ProN", Arial, nc3Jp, sans-serif !important;
+}
+
+.container{
+    height: auto !important;
+}
+
+.content{
+    background-color: #dcdcdc;
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+        padding: 0px;
+    }
+}
+
+#innerContent {
+    width: 1240px;
+    max-width: 100%;
+
+    margin: 0 auto;
+    padding: 50px;
+
+    background-color: #fdfdfd;
+}
+
+@media screen and (max-width: 768px) {
+    #innerContent{
+        border-style: none;
+    }
+}

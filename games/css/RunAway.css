@@ -1,20 +1,8 @@
-.container{
-    padding: 0 20px 0;
-}
-
-.container h2{
-    margin: 25px 0 10px;
-}
-
 .main_block {
     width: 100%; /* ブロックの幅を設定 */
     margin: 50px auto; /* ブロックを中央に配置 */
     background-color: #efefef;
     padding: 20px;
-}
-
-.main_block h1 {
-    margin-bottom: 10px;
 }
 
 .main_block .game_icon {
@@ -66,6 +54,7 @@
 }
 
 .container .imgs img{
+    width: 500px;
     margin-top: 20px;
 }
 
