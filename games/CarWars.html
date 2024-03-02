@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="../img/icon.png">
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="css/games.css">
     <link rel="stylesheet" href="css/CarWars.css">
 
@@ -23,84 +23,91 @@
 </head>
 <body>
     <script src="games_index.js"></script>
-    <header></header>
-    <div class="container w_inner">
-        <div class="main_block">
-            <h1>CarWars</h1>
-            <img class="game_icon" src="img/CarWars/icon.png" alt="icon">
-            <div class="play">
-                <h2>Download:</h2>
-                <div class="links">
-                    <a id="Github" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/CarWars" target="_blank">
-                        <div class="platform-name">PC only</div>
-                        <img src="./img/github-logo.svg">
-                    </a>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <div class="main_block">
+                    <h1>CarWars</h1>
+                    <img class="game_icon" src="img/CarWars/icon.png" alt="icon">
+                    <div class="play">
+                        <h2>Download:</h2>
+                        <div class="links">
+                            <a id="Github" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/CarWars" target="_blank">
+                                <div class="platform-name">PC only</div>
+                                <img src="./img/github-logo.svg">
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            
+                <div class="imgs">
+                    <img src="img/CarWars/ScreenShot1.png" alt="img1">
+                    <img src="img/CarWars/ScreenShot2.png" alt="img2">
+                    <img src="img/CarWars/ScreenShot3.png" alt="img3">
+                    <img src="img/CarWars/ScreenShot4.png" alt="img4">
+                    <img src="img/CarWars/ScreenShot5.png" alt="img5">
+                </div>
+                <div id="rule">
+                    <h2>ゲームルール</h2>
+                    <p>
+                        一番多くの敵を倒した人が勝ち、というFFA形式のゲーム。
+                    </p>
+                </div>
+                <div id="control">
+                    <h2>操作方法:</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>アクセル・ハンドル</th>
+                                <td>W A S D</td>
+                            </tr>
+                            <tr>
+                                <th>ブースト</th>
+                                <td>Left Shift</td>
+                            </tr>
+                            <tr>
+                                <th>ジャンプ</th>
+                                <td>Space</td>
+                            </tr>
+                            <tr>
+                                <th>発射</th>
+                                <td>左クリック</td>
+                            </tr>
+                            <tr>
+                                <th>ADS</th>
+                                <td>右クリック</td>
+                            </tr>
+                            <tr>
+                                <th>リロード</th>
+                                <td>R</td>
+                            </tr>
+                            <tr>
+                                <th>スコアボードを見る</th>
+                                <td>Tab</td>
+                            </tr>
+                            <tr>
+                                <th>メニューを開く</th>
+                                <td>Esc</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="about">
+                    <h2>About:</h2>
+                    <p>
+                        2022年11月まで半年近くかけて作っていたゲーム。<br>
+                        2Dゲームが作れたし、今度は3Dゲームもつくれるやろ！という生半可な気持ちで超大作を制作しようとしたため地獄を見た上に、最終的にデータが吹っ飛んでメンタルブレイク。(マジで立ち直るのに時間かかった)<br>
+                        なんとか最終ビルドのデータがGoogleDriveに残っていたのが救いだが、テクスチャが壊れていたりしてます...<br>
+                        みんなもデータのバックアップはきちんととっておこうね！<br>
+                        ちなみに今はクラウド&ローカルHDDへの二重バックアップへ進化しています(笑)<br>
+                        <br>
+                        制作環境：Unity<br>
+                        制作期間：約半年<br>
+                        公開日：2023/06/04
+                    </p>
             </div>
         </div>
-
-        <div class="imgs">
-            <img src="img/CarWars/ScreenShot1.png" alt="img1">
-            <img src="img/CarWars/ScreenShot2.png" alt="img2">
-            <img src="img/CarWars/ScreenShot3.png" alt="img3">
-            <img src="img/CarWars/ScreenShot4.png" alt="img4">
-            <img src="img/CarWars/ScreenShot5.png" alt="img5">
-        </div>
-        <div id="rule">
-            <h2>ゲームルール</h2>
-            <p>
-                一番多くの敵を倒した人が勝ち、というFFA形式のゲーム。
-            </p>
-        </div>
-        <div id="control">
-            <h2>操作方法:</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>アクセル・ハンドル</th>
-                        <td>W A S D</td>
-                    </tr>
-                    <tr>
-                        <th>ブースト</th>
-                        <td>Left Shift</td>
-                    </tr>
-                    <tr>
-                        <th>ジャンプ</th>
-                        <td>Space</td>
-                    </tr>
-                    <tr>
-                        <th>発射</th>
-                        <td>左クリック</td>
-                    </tr>
-                    <tr>
-                        <th>ADS</th>
-                        <td>右クリック</td>
-                    </tr>
-                    <tr>
-                        <th>リロード</th>
-                        <td>R</td>
-                    </tr>
-                    <tr>
-                        <th>スコアボードを見る</th>
-                        <td>Tab</td>
-                    </tr>
-                    <tr>
-                        <th>メニューを開く</th>
-                        <td>Esc</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div id="about">
-            <h2>About:</h2>
-            <p>
-                2022年11月まで半年近くかけて作っていたゲーム。<br>
-                2Dゲームが作れたし、今度は3Dゲームもつくれるやろ！という生半可な気持ちで超大作を制作しようとしたため地獄を見た上に、最終的にデータが吹っ飛んでメンタルブレイク。(マジで立ち直るのに時間かかったよ...)<br>
-                なんとか最終ビルドのデータがGoogleDriveに残っていたのが救いだが、テクスチャが壊れていたりしてます...<br>
-                みんなもデータのバックアップはきちんととっておこうね！<br>
-                ちなみに今はクラウド&ローカルHDDへの二重バックアップへ進化しています(笑)
-                <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">進展です。<br>検査結果はデータ復旧不能となりました。<br>もうデータの救出は半ば諦めていますが、最後の望みをかけて自分でもう少し何とかできないか探ってみようと思います。<a href="https://twitter.com/hashtag/PC?src=hash&amp;ref_src=twsrc%5Etfw">#PC</a> <a href="https://twitter.com/hashtag/PC%E3%82%A8%E3%82%B3%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9?src=hash&amp;ref_src=twsrc%5Etfw">#PCエコサービス</a> <a href="https://twitter.com/hashtag/HDD?src=hash&amp;ref_src=twsrc%5Etfw">#HDD</a> <a href="https://twitter.com/hashtag/%E3%83%87%E3%83%BC%E3%82%BF%E5%BE%A9%E6%97%A7?src=hash&amp;ref_src=twsrc%5Etfw">#データ復旧</a> <a href="https://t.co/SHLT8Uzm00">https://t.co/SHLT8Uzm00</a> <a href="https://t.co/bQGVqxOeXW">pic.twitter.com/bQGVqxOeXW</a></p>&mdash; ShakeRice@ゲーム制作 (@SR_Shake_Rice) <a href="https://twitter.com/SR_Shake_Rice/status/1590660064217796608?ref_src=twsrc%5Etfw">November 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </p>
     </div>
     <footer></footer>
 </body>

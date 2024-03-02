@@ -2,11 +2,24 @@
 
 h1, h2, h3, h4 { font-weight: bold; }
 
-h1{ font-size: xx-large;}
-h2{ font-size: x-large;}
-h3{ font-size: large;}
+h1{ 
+    font-size: xx-large;
+    margin: 20px 0 10px;
+}
 
-p{ font-size: 18px; }
+h2{
+    font-size: x-large;
+    margin: 20px 0 10px;
+}
+
+h3{ 
+    font-size: large;
+    margin: 20px 0 10px;
+}
+
+p{ 
+    font-size: 18px; 
+}
 
 img { max-width: 100%;}
 
@@ -19,8 +32,7 @@ body{
 }
 
 .content{
-    padding: 50px;
-    background-color: #DEF0E2;
+    background-color: #dcdcdc;
 }
 
 @media screen and (max-width: 768px) {
@@ -37,9 +49,6 @@ body{
     padding: 50px;
 
     background-color: #fdfdfd;
-
-    border-radius: 10px;
-    border: 5px solid #80BD8D;
 }
 
 @media screen and (max-width: 768px) {
