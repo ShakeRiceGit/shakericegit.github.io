@@ -8,6 +8,8 @@ footer{
     max-width: 1240px;
     margin: 0 auto;
     text-align: center;
+
+    color: #fff;
 }
 
 .SNS{
@@ -23,7 +25,6 @@ footer{
     width: 50%;
     margin: 0 auto;
     padding: 10px;
-    color: #fff;
 }
 
 .footerMenu ul{
@@ -47,7 +48,6 @@ footer{
 }
 
 .copy{
-    color: #fff;
     font-size: 12px;
     padding:  10px 0 10px;
 }
