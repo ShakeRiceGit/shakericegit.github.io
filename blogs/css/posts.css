@@ -18,12 +18,7 @@
     display: block;
 }
 
-#posts li a h2{
+#posts li a h3{
     margin: 0;
-    padding: 20px 30px 20px;
-
-    /*枠内からはみ出る場合は「~...」と省略する*/
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    padding: 15px 20px 50px;
 }
