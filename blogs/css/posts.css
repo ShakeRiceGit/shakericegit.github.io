@@ -18,7 +18,7 @@
     display: block;
 }
 
-#posts li a h2{
+#posts li a h3{
     margin: 0;
-    padding: 20px 30px 20px;
+    padding: 15px 20px 50px;
 }
