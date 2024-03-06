@@ -1,0 +1,24 @@
+#innerContent{
+    min-height: 100vh;
+}
+
+p{
+    margin-top: 1em;
+}
+
+
+#url a:link{
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+#url a:visited {
+    color: #0099FF;
+    text-decoration: underline;
+}
+
+#url a:active {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
