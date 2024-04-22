@@ -2,10 +2,46 @@
     min-height: 100vh;
 }
 
-p{
-    margin-top: 1em;
+h1{
+    font-size: xx-large;
 }
 
+h2{
+    font-size: x-large;
+    color: #364e96;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #364e96;/*上線*/
+    border-bottom: solid 3px #364e96;/*下線*/
+}
+
+h3{
+    font-size: x-large;
+
+    padding-bottom: 0.25em;
+
+    /*線の種類（二重線）太さ 色*/
+    border-bottom: double 5px #FFC778;
+
+    margin-top: 2.5em;
+    margin-bottom: 0.8em;
+}
+
+h4{
+    font-size: x-large;
+    margin-top: 1.25em;
+    margin-bottom: 1em;
+}
+
+p{
+    font-size: large;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+#url a{
+    font-size: 1.2em;
+}
 
 #url a:link{
     color: #0000EE;
