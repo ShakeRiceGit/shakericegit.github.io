@@ -38,28 +38,75 @@ p{
     margin-bottom: 1em;
 }
 
-
-#url a{
-    font-size: 1.2em;
-}
-
-#url a:link{
-    color: #0000EE;
-    text-decoration: underline;
-}
-
-#url a:visited {
-    color: #0099FF;
-    text-decoration: underline;
-}
-
-#url a:active {
-    color: #FF0000;
-    text-decoration: underline;
-}
-
 #innerConent ul{
     list-style: disc;
     padding-left: 40px;
 }
 
+.url{
+    font-size: 1.2em;
+}
+
+.url:link{
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.url:visited {
+    color: #0099FF;
+    text-decoration: underline;
+}
+
+.url:active {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+.contentsList {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+}
+
+.contentsList div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #3A894B;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.contentsList ol {
+    list-style-type: disc;
+    margin: 0;
+    overflow: hidden;
+}
+
+.contentsList > ol {
+    padding: 1em 1em 1em 3em;
+}
+
+.contentsList ol ol {
+    margin-top: 0.5em;
+    padding-left: 1.1em;
+}
+
+.contentsList li {
+    padding: 0.5em 0;
+    font-weight: 600;
+}
+
+.contentsList ol ol li {
+    font-weight: 500;
+    font-size: .9em;
+}
+
+.contentsList a {
+    color: #333;
+    text-decoration: none;
+}
