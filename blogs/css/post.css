@@ -113,6 +113,7 @@ p{
 
 .code-frame{
     margin: 1em 0 1em;
+    
 }
 
 pre {
@@ -121,6 +122,8 @@ pre {
     border-radius: 0.5em;
     background: #1d2020;/* 背景色 */
     color: #54687c;/* 文字色 */
+
+    overflow-x: scroll;     /* 横方向にスクロール可能にする */
 }
 
 code {
