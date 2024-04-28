@@ -59,6 +59,12 @@
                                 <a href="#h2">「twitter:card」について</a>
                             </ol>
                         </li>
+                        <li><a href="#h3">注意点</a>
+                            <ol>
+                                <a href="#h4">アイキャッチ画像について</a>
+                            </ol>
+                        </li>
+                        <li><a href="#h5">きちんと表示されているか確認する方法</a></li>
                         <li><a href="#after_post">実際の投稿</a></li>
                     </ol>
                 </div>
@@ -94,6 +100,32 @@
                     「summary」はデフォルト。「summary_large_image」は大きめに表示。<br>
                     「app」はアプリ配布用、「player」は動画配信用らしいです。 (使ったことないけど)
                 </p>
+
+                <h2 id="h3">注意点</h2>
+                <h3 id="h4">アイキャッチ画像について</h3>
+                <ul>
+                    <li>画像のパスは<strong>相対パスではなく絶対パス　例:「https://.../*.jpg」</strong></li>
+                    <li>画像の最小サイズは<strong>300px × 157px</strong>、最大サイズは<strong>4096px × 4096px</strong></li>
+                    <li>画像のサイズは<strong>5MB未満</strong></li>
+                    <li>サポートされている画像の形式は<strong>JPG、PNG、WEBP、GIF</strong></li>
+                </ul>
+                <p>twitter:cardで表示される画像のアスペクト比</p>
+                <ul>
+                    <li>「summary」<strong>1:1</strong></li>
+                    <li>「summary_large_image」<strong>1.91:1</strong></li>
+                </ul>
+
+                <h2 id="h5">きちんと表示されているか確認する方法</h2>
+                <p>
+                    Twitterカードがきちんと表示されているかを確認するための<a class="url" href="https://cards-dev.twitter.com/validator">公式サイト</a>が存在しますが、すでにサポートが終了されており、<strong>プレビューが表示されない</strong>ため、<br>
+                    <a class="url" href="https://ogp.buta3.net/">OGP確認ツール</a><br>
+                    こちらのサイトを使うことをおすすめします。<br>
+                    このサイトではどんな内容が設定されているのかをすべて確認することができるため便利です。
+                </p>
+                <p>
+                    ↓プレビューもきちんと表示されます。
+                </p>
+                <img src="img/2024/04/28/ogp_preview.jpg" alt="ogp_preview">
                 <div id="after_post">
                     <h3>実際の投稿</h3>
                     <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今更ながらDirectX9を触ってみました。<br>↓ブログ<a href="https://t.co/dgWJSrkMwG">https://t.co/dgWJSrkMwG</a><a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0?src=hash&amp;ref_src=twsrc%5Etfw">#プログラミング</a></p>&mdash; ShakeRice@ゲーム制作 (@SR_Shake_Rice) <a href="https://twitter.com/SR_Shake_Rice/status/1781983720586743824?ref_src=twsrc%5Etfw">April 21, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
