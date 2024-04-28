@@ -101,7 +101,7 @@ p{
 .contentsList li {
     padding: 0.5em 0;
     font-weight: 600;
-    margin-top: 1em;
+    margin-top: 0.5em;
 }
 
 .contentsList ol ol li {
