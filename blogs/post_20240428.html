@@ -25,14 +25,14 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
      crossorigin="anonymous"></script>
 
+    <!--Twitter-->
+    <meta name="twitter:card"      content="summary"/>
+    <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+
      <!--OGP-->
      <meta property="og:title"       content="自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法"/>
      <meta property="og:url"         content="https://shakericegit.github.io/blogs/post_20240428.html"/>
-     <meta property="og:image"       content="img/head.jpg"/>
-
-     <!--Twitter-->
-     <meta name="twitter:card"      content="summary"/>
-     <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+     <meta property="og:image"       content="https://shakericegit.github.io/blogs/img/head.jpg"/>
 </head>
 
 <body>
@@ -70,17 +70,18 @@
                 <div class="code-frame">
                     <pre>
                         <code>
+
+ &lt;meta name="twitter:card" content="アイキャッチ画像の設定"&gt;
+ &lt;meta name="twitter:site" content="@TwitterのID"&gt;
  &lt;meta property="og:title" content="Twitterに表示するブログのタイトル"&gt;
  &lt;meta property="og:url"   content="記事のURL"&gt;
- &lt;meta property="og:image" content="アイキャッチ画像(サムネイル)"&gt;
- &lt;meta name="twitter:card" content="アイキャッチ画像の大きさの設定"&gt;
- &lt;meta name="twitter:site" content="@TwitterのID"&gt;
+ &lt;meta property="og:image" content="アイキャッチ画像のパス"&gt;
                         </code>
                     </pre>
                 </div>
                 <h3 id="h2">「twitter:card」について</h3>
                 <p>
-                    「twitter:card」の設定にはカード種類には<br>
+                    「twitter:card」の設定の種類には<br>
                     <ul>
                         <li>summary</li>
                         <li>summary_large_image</li>
