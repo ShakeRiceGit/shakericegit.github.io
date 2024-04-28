@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/post.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+     <meta property="og:title"       content="自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法">
+     <meta property="og:url"         content="https://shakericegit.github.io/blogs/post_20240428.html">
+     <meta property="og:image"       content="img/head.jpg">
+  
+     <meta name="twitter:card" content="summary">
+     <meta name="twitter:site" content="@SR_Shake_Rice">
+</head>
+
+<body>
+    <script src="blogs_index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1>自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法</h1>
+                <p>
+                    ↓Twitterでブログを宣伝した際の実際の投稿
+                </p>
+                <img src="img/2024/04/28/before_post.jpg" alt="before_post">
+                <p>
+                    これだとまったく目を引かないし、人によっては怪しいサイトだと思われても仕方がない。<br>
+                    そこで、もっと目を引かれやすくするための<strong>「アイキャッチ画像」</strong>を表示する方法を紹介します。
+                </p>
+                <div class="contentsList">
+                    <div>目次</div>
+                    <ol>
+                        <li>
+                            <a href="#h1">アイキャッチ画像を設定する方法</a>
+                            <ol>
+                                <a href="#h2">「twitter:card」について</a>
+                            </ol>
+                        </li>
+                        <li><a href="#after_post">実際の投稿</a></li>
+                    </ol>
+                </div>
+                <h2 id="h1">アイキャッチ画像を設定する方法</h2>
+                <p>
+                    やることは簡単。<br>
+                    headタグの中に以下のコードを入れて設定するだけ。
+                </p>
+                <div class="code-frame">
+                    <pre>
+                        <code>
+ &lt;meta property="og:title" content="Twitterに表示するブログのタイトル"&gt;
+ &lt;meta property="og:url"   content="記事のURL"&gt;
+ &lt;meta property="og:image" content="アイキャッチ画像(サムネイル)"&gt;
+ &lt;meta name="twitter:card" content="アイキャッチ画像の大きさの設定"&gt;
+ &lt;meta name="twitter:site" content="@TwitterのID"&gt;
+                        </code>
+                    </pre>
+                </div>
+                <h3 id="h2">「twitter:card」について</h3>
+                <p>
+                    「twitter:card」の設定にはカード種類には<br>
+                    <ul>
+                        <li>summary</li>
+                        <li>summary_large_image</li>
+                        <li>app</li>
+                        <li>player</li>
+                    </ul>
+                </p>
+                <p>
+                    の4種類があります。<br>
+                    「summary」はデフォルト。「summary_large_image」は大きめに表示。<br>
+                    「app」はアプリ配布用、「player」は動画配信用らしいです。 (使ったことないけど)
+                </p>
+                <div id="after_post">
+                    <h3>実際の投稿</h3>
+                    <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今更ながらDirectX9を触ってみました。<br>↓ブログ<a href="https://t.co/dgWJSrkMwG">https://t.co/dgWJSrkMwG</a><a href="https://twitter.com/hashtag/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0?src=hash&amp;ref_src=twsrc%5Etfw">#プログラミング</a></p>&mdash; ShakeRice@ゲーム制作 (@SR_Shake_Rice) <a href="https://twitter.com/SR_Shake_Rice/status/1781983720586743824?ref_src=twsrc%5Etfw">April 21, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+                <p>2024/04/28</p>
+                <a class="url" href="posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
