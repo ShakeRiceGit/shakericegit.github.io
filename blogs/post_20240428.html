@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法</title>
+    <title>自作ブログのアイキャッチ画像を表示する方法</title>
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="../img/icon.png">
 
@@ -30,7 +30,7 @@
     <meta name="twitter:site"      content="@SR_Shake_Rice"/>
 
      <!--OGP-->
-     <meta property="og:title"       content="自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法"/>
+     <meta property="og:title"       content="自作ブログのアイキャッチ画像を表示する方法"/>
      <meta property="og:description" content="もっと目を引かれやすくするための「アイキャッチ画像」を表示する方法を紹介します。"/>
      <meta property="og:url"         content="https://shakericegit.github.io/blogs/post_20240428.html"/>
      <meta property="og:image"       content="https://shakericegit.github.io/blogs/img/head.jpg"/>
@@ -42,7 +42,7 @@
         <header></header>
         <div class="content">
             <div id="innerContent">
-                <h1>自作サイトをTwitterにシェアした際にアイキャッチ画像を表示する方法</h1>
+                <h1>自作ブログのアイキャッチ画像を表示する方法</h1>
                 <p>
                     ↓Twitterでブログを宣伝した際の実際の投稿
                 </p>
@@ -76,14 +76,19 @@
                 </p>
                 <div class="code-frame">
                     <pre>
-                        <code>
+<code>&lt;!--必要最低限のコード--&gt;
+&lt;meta name="twitter:card"        content="アイキャッチ画像の設定"/&gt;
+&lt;meta name="twitter:site"        content="@TwitterのID"/&gt;
+&lt;meta property="og:title"        content="Twitterに表示するブログのタイトル"/&gt;
+&lt;meta property="og:url"          content="記事のURL"/&gt;
+&lt;meta property="og:image"        content="アイキャッチ画像のパス"/&gt;
 
- &lt;meta name="twitter:card" content="アイキャッチ画像の設定"&gt;
- &lt;meta name="twitter:site" content="@TwitterのID"&gt;
- &lt;meta property="og:title" content="Twitterに表示するブログのタイトル"&gt;
- &lt;meta property="og:url"   content="記事のURL"&gt;
- &lt;meta property="og:image" content="アイキャッチ画像のパス"&gt;
-                        </code>
+&lt;!--その他使える設定(一部)--&gt;
+&lt;meta property="og:description"  content="ページの説明文" /&gt;
+&lt;meta property="og:site_name"    content="サイト名" /&gt;
+&lt;meta property="og:type"         content="ページの種類" /&gt;
+&lt;meta property="og:locale"       content="言語の指定"/&gt;
+</code>
                     </pre>
                 </div>
                 <h3 id="h2">「twitter:card」について</h3>

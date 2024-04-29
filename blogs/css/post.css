@@ -120,7 +120,7 @@ p{
 
 pre {
     display: block;
-    padding: 0.8em 1em 0em 1em;/* 内側の余白 */
+    padding: 0.8em 1em 0.8em 1em;/* 内側の余白 */
     border-radius: 0.5em;
     background: #1d2020;/* 背景色 */
     color: #54687c;/* 文字色 */
@@ -132,7 +132,7 @@ code {
     display: block;
     min-width: 100%;
     padding: 0.2em 0.3em ;/* 内側の余白 */
-    margin: 0 0.2em;/* 外側の余白 */
+    margin: 0 0.2em -2em 0.2em;/* 外側の余白 */
     border-radius: 5px;/* 角の丸み */
     background: #1d2020;/* 背景色 */
     color: #fff;/* 文字色 */
