@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今更ながらDirectX"9"</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="../img/icon.png">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/post.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+    <!--Twitter-->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@SR_Shake_Rice"/>
+
+     <!--OGP-->
+     <meta property="og:title"       content="今更ながらDirectX9"/>
+     <meta property="og:description" content="現時点での最新バージョンは「DirectX12」のはずなのになぜ今更DirectX9を勉強していたのか..."/>
+     <meta property="og:url"         content="https://shakericegit.github.io/blogs/post_20240421.html"/>
+     <meta property="og:image"       content="https://shakericegit.github.io/blogs/img/head.jpg"/>
+</head>
+
+<body>
+    <script src="blogs_index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1>今更ながらDirectX"9"</h1>
+                <p>
+                    久しぶりの投稿。<br>
+                    というのも、今までDirectX9の勉強をしていました。
+                </p>
+                <div class="contentsList">
+                    <div>目次</div>
+                    <ol>
+                        <li><a href="#h1">なぜ今更DirectX9？</a></li>
+                        <li>
+                            <a href="#h2">早速作ってみた</a>
+                            <ol>
+                                <li><a href="#inseki_game">隕石ゲーム</a></li>
+                                <li><a href="#kakurenbo">かくれんぼゲーム</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#h3">よかったところ</a></li>
+                        <li><a href="#h4">気になったところ</a></li>
+                        <li><a href="#h5">一通り読んでみて</a></li>
+                    </ol>
+                </div>
+
+                <h3 id="h1">なぜ今更DirectX9？</h3>
+                
+                <p>
+                    現時点での最新バージョンは「DirectX12」のはずなのになぜ今更DirectX9を勉強していたのかというと、3Dの知識に詳しい先生から<br>
+                    「3Dの知識がない状態からゲームを作るなら、DirectX9から始めるとわかりやすくていいよ」<br>
+                    との助言をいただいたため、もともとはDirectX"11"を勉強しようとしていたものの、さらに昔のバージョンのDirectX9から勉強することにしました。<br>
+                </p>
+                <p>
+                    ↓勉強に使った本はこちら(中古のため、リンク切れの可能性あり)
+                </p>
+                <a class="url" href="https://amzn.asia/d/4YqN7QG" target="_blank">15歳からはじめるDirectX 9 3Dゲームプログラミング教室 C++編</a>
+                <p>
+                    発行されたのはなんと<strong>2007年</strong>と、かなり昔の本です。<br>
+                    そもそもDirectX9自体が昔過ぎてほとんど廃版になっている中、数少ない入門書です。<br>
+                    僕が購入した際には700円程の安い値段で購入でき、状態も良くてCD-ROMも未開封でついていました。
+                </p>
+
+                <h3 id="h2">早速作ってみた</h3>
+                <p>
+                    一通り読みながら、本に書いてあった２種類のゲームを作ってみました。<br>
+                    ※本に書いてあるコードをほとんど丸写ししただけなので、<strong>コードは記載しません。</strong>
+                </p>
+                
+                <div id="inseki_game">
+                    <h4>・隕石ゲーム</h4>
+                    <img src="img/2024/04/21/inseki1.jpg" alt="inseki1">
+                    <p>
+                        自機を操作して上から来る隕石を避けるゲーム。
+                    </p>
+                    <img src="img/2024/04/21/inseki2.jpg" alt="inseki2">
+                    <p>
+                        当たるとゲームオーバー。
+                    </p>
+                </div>
+                
+                <div id="kakurenbo">
+                    <h4>・かくれんぼゲーム</h4>
+                    <img src="img/2024/04/21/kakurenbo1.jpg" alt="kakurenbo1">
+                    <p>
+                        敵につかまらないように一定時間逃げるゲーム。
+                    </p>
+                    <img src="img/2024/04/21/kakurenbo2.jpg" alt="kakurenbo2">
+                    <p>
+                        一定時間が経つと弱体化モードになるので、その時に捕まえるとクリア。
+                    </p>
+                    <img src="img/2024/04/21/kakurenbo3.jpg" alt="kakurenbo3">
+                    <p>
+                        木の裏に隠れるとちゃんと見つからない
+                    </p>
+                </div>
+                
+                <h3 id="h3">よかったところ</h3>
+                <ul>
+                    <p>・「１５歳から始める」とあるように、初歩の初歩から丁寧に書かれている。</p>
+                    <p>・付属のCD-ROMにソースコードや3Dモデルなどもすべて用意されている。</p>
+                </ul>
+
+                <h3 id="h4">気になったところ</h3>
+                <ul>
+                    <p>
+                        ・書籍内で音を鳴らすために使用しているライブラリが現時点で<strong>サポートされていない</strong>ため、別のライブラリを使用する必要がある。<br>
+                        →調べてみたところ、「XAudio2」というライブラリを使うのがよさそう？
+                        <div id="url">
+                            ※<a href="https://zenn.dev/kd_gamegikenblg/articles/4f955822601484" target="_blank">実装時に参考にしたサイト</a>
+                        </div>
+                    </p>
+                </ul>
+
+                <h3 id="h5">一通り読んでみて</h3>
+                <p>
+                    僕が探した中で数少なかったDirectX9の入門書、なおかつ唯一のゲームプログラミングについての本だったため、ギリギリ中古で残っていてくれてよかった...と思った。<br>
+                </p>
+
+                <h4>次はいよいよDirectX9で１からゲームを作りたいと思います！</h4>
+
+                <p>2024/04/21</p>
+                <a class="url" href="posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
