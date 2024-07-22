@@ -4,94 +4,49 @@
 <!--  created with free sitemap generation system www.sitemapxml.jp  --> 
 <url>
   <loc>https://shakericegit.github.io/</loc>
-  <priority>1.0</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/JumpAndClimb.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/jumpandclimb/index.html</loc>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/RunAway.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/runaway-unitychan/index.html</loc>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/Invader.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/invader/index.html</loc>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/Rocket.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/rocket-side-to-side/index.html</loc>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/walk.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/walk/index.html</loc>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/CarWars.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/carwars/index.html</loc>
 </url>
 <url>
-  <loc>https://shakericegit.github.io/games/DrillMAN.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
+  <loc>https://shakericegit.github.io/games/drillman/index.html</loc>
 </url>
 
 <url>
   <loc>https://shakericegit.github.io/blogs/posts.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shakericegit.github.io/blogs/articles/2024/03/02/post.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shakericegit.github.io/blogs/articles/2024/03/06/post.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shakericegit.github.io/blogs/articles/2024/04/21/post.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-21T18:43:46+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shakericegit.github.io/blogs/articles/2024/04/28/post.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-04-30T13:43:00+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shakericegit.github.io/blogs/articles/2024/05/04/post.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-05-04T11:27:00+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 <url>
   <loc>https://shakericegit.github.io/blogs/articles/2024/07/21/post.html</loc>
-  <priority>0.8</priority>
-  <lastmod>2024-07-21T16:51:00+09:00</lastmod>
-  <changefreq>always</changefreq>
 </url>
 
 </urlset>
