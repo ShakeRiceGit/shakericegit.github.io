@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【初心者C++】メモリリーク検出ツールを使ってみたら死ぬほどメモリリークしてた</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blogs/articles/post.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+    <!--Twitter-->
+    <meta name="twitter:card"      content="summary"/>
+    <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+
+    <!--OGP-->
+    <meta property="og:title"       content="【初心者C++】メモリリーク検出ツールを使ってみたら死ぬほどメモリリークしてた"/>
+    <meta property="og:description" content="CRTライブラリというメモリリーク検出ツールがあることを知り、興味本位で使ってみました..."/>
+    <meta property="og:type"        content="article" />
+    <meta property="og:url"         content="https://shakericegit.github.io/blogs/articles/2024/08/26/post.html"/>
+    <meta property="og:image"       content="https://shakericegit.github.io/blogs/articles/generic/img/head.jpg"/>
+</head>
+
+<body>
+    <script src="/index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1>【初心者C++】メモリリーク検出ツールを使ってみたら死ぬほどメモリリークしてた</h1>
+                <div id="h1">
+                    <h2>制作途中のゲームが死ぬほどメモリリークしてた</h2>
+                    <p>
+                        現在僕は<strong>DirectX9</strong>を使って簡単な3Dゲームを制作中なのですが、<br>
+                        <a href="https://learn.microsoft.com/ja-jp/cpp/c-runtime-library/find-memory-leaks-using-the-crt-library?view=msvc-170" class="url">
+                            CRTライブラリ</a>
+                        という<strong>メモリリーク検出ツール</strong>があることを知り、興味本位で使ってみました。<br>
+                        その結果がこれ。
+                    </p>
+                    <div class="code-frame">
+                        <pre>
+<code>Detected memory leaks!
+    Dumping objects ->
+    {283} normal block at 0x00000133BC4D8800, 48 bytes long.
+     Data: < 8  3    8  3   > 18 38 FF B4 33 01 00 00 1C 38 FF B4 33 01 00 00 
+    {280} normal block at 0x00000133B4FF3810, 56 bytes long.
+     Data: < P  ?            > 50 A2 ED 3F F7 7F 00 00 04 00 00 00 00 00 00 00 
+    {279} normal block at 0x00000133BC4D8020, 48 bytes long.
+     Data: <( M 3   , M 3   > 28 8E 4D BC 33 01 00 00 2C 8E 4D BC 33 01 00 00 
+    {276} normal block at 0x00000133BC4D8E20, 48 bytes long.
+     Data: <   ?            > F0 A3 ED 3F F7 7F 00 00 03 00 00 00 00 00 00 00 
+    {275} normal block at 0x00000133BC4D8B10, 48 bytes long.
+     Data: <T 8 %     8 %   > 54 EE 38 14 25 00 00 00 80 EF 38 14 25 00 00 00 
+    {274} normal block at 0x00000133BC4D7FB0, 40 bytes long.
+     Data: <0  ?            > 30 B9 ED 3F F7 7F 00 00 01 00 00 00 00 00 00 00 
+    {273} normal block at 0x00000133BC4D8410, 48 bytes long.
+     Data: <T 8 %     8 %   > 54 EE 38 14 25 00 00 00 80 EF 38 14 25 00 00 00 
+    {272} normal block at 0x00000133BC4D88E0, 40 bytes long.
+     Data: <0  ?            > 30 B9 ED 3F F7 7F 00 00 01 00 00 00 00 00 00 00 
+    {271} normal block at 0x00000133BC4D8100, 48 bytes long.
+     Data: <T 8 %     8 %   > 54 EE 38 14 25 00 00 00 80 EF 38 14 25 00 00 00 
+    {270} normal block at 0x00000133BC4D85D0, 40 bytes long.
+     Data: <0  ?           A> 30 B9 ED 3F F7 7F 00 00 00 00 00 00 00 00 98 41 
+    {269} normal block at 0x00000133BC4D8C60, 48 bytes long.
+     Data: <T 8 %     8 %   > 54 EE 38 14 25 00 00 00 80 EF 38 14 25 00 00 00 
+    {268} normal block at 0x00000133BC4D8D40, 40 bytes long.
+     Data: <0  ?            > 30 B9 ED 3F F7 7F 00 00 00 00 00 00 00 00 98 C1 
+    {267} normal block at 0x00000133BC4D86B0, 48 bytes long.
+     Data: < S ?      8 %   > D8 53 EE 3F F7 7F 00 00 80 EF 38 14 25 00 00 00 
+    {266} normal block at 0x00000133BC4D7F40, 40 bytes long.
+     Data: <8  ?          p > 38 B0 ED 3F F7 7F 00 00 00 00 00 00 00 00 70 C1 
+    {265} normal block at 0x00000133BC495680, 8 bytes long.
+     Data: <@ M 3   > 40 7F 4D BC 33 01 00 00 
+    {264} normal block at 0x00000133BC495720, 16 bytes long.
+     Data: <  I 3           > B0 D5 49 BC 33 01 00 00 00 00 00 00 00 00 00 00 
+    {263} normal block at 0x00000133BC49D5B0, 32 bytes long.
+     Data: < WI 3    VI 3   > 20 57 49 BC 33 01 00 00 80 56 49 BC 33 01 00 00 
+    {258} normal block at 0x00000133BC49CE30, 36 bytes long.
+     Data: <          H     > 00 00 00 00 00 00 00 00 00 00 48 C2 00 00 00 00 
+    {167} normal block at 0x00000133B4F38460, 16 bytes long.
+     Data: < S ?            > E8 53 EE 3F F7 7F 00 00 00 00 00 00 00 00 00 00 
+    Object dump complete.
+</code>
+                        </pre>
+                    </div>
+                    <p>
+                        なんと合計で<strong>748B</strong>ものメモリリークをしていました。<br>
+                        まだろくにゲームとしてできていない状態でですよ？w
+                    </p>
+                    <p>
+                        どうやらUnityC#に慣れすぎてしまっていたせいで、完全にC++のメモリの動的確保・解放について頭に入っていなかったようです。<br>
+                        これについて再度勉強し、メモとして再度ブログにも残しておこうと思います。
+                    </p>
+                </div>
+                <p>2024/08/26</p>
+                <a class="url" href="/blogs/posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
