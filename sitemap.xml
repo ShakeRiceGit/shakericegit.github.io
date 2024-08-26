@@ -1,54 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
-<url>
-  <loc>https://shakericegit.github.io/</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/jumpandclimb/index.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/runaway-unitychan/index.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/invader/index.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/rocket-side-to-side/index.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/walk/index.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/carwars/index.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/games/drillman/index.html</loc>
-</url>
-
-<url>
-  <loc>https://shakericegit.github.io/blogs/posts.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/03/02/post.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/03/06/post.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/04/21/post.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/04/28/post.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/05/04/post.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/07/21/post.html</loc>
-</url>
-<url>
-  <loc>https://shakericegit.github.io/blogs/articles/2024/08/26/post.html</loc>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+  <url>
+    <loc>https://shakericegit.github.io/</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/jumpandclimb/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/runaway-unitychan/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/invader/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/rocket-side-to-side/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/walk/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/carwars/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/games/drillman/index.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  </urlset>
+  
+  <url>
+    <loc>https://shakericegit.github.io/blogs/posts.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/03/02/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/03/06/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/04/21/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/04/28/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/05/04/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/07/21/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://shakericegit.github.io/blogs/articles/2024/08/26/post.html</loc>
+    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
 </urlset>
