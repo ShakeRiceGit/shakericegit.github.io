@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【C++】CRTライブラリを使用してメモリリークを検出する方法</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blogs/articles/post.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+    <!--Twitter-->
+    <meta name="twitter:card"      content="summary"/>
+    <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+
+    <!--OGP-->
+    <meta property="og:title"       content="【C++】CRTライブラリを使用してメモリリークを検出する方法"/>
+    <meta property="og:description" content="CRTライブラリを使ったメモリ検出方法は簡単。プログラムの終了直前にこの関数を実行するだけ..."/>
+    <meta property="og:type"        content="article" />
+    <meta property="og:url"         content="https://shakericegit.github.io/blogs/articles/2024/08/27/post.html"/>
+    <meta property="og:image"       content="https://shakericegit.github.io/blogs/articles/generic/img/head.jpg"/>
+</head>
+
+<body>
+    <script src="/index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1>【C++】CRTライブラリを使用してメモリリークを検出する方法</h1>
+                <p>
+                    <a href="../26/post.html" class="url">前回のブログ</a>より、まずはCRTライブラリでのメモリ検出方法についてメモしておこうと思います。
+                </p>
+                <div id="h1">
+                    <h2>CRTライブラリとは</h2>
+                    <p>
+                        "CRTライブラリ"とは<strong>「Cランタイムライブラリ」</strong>の略称で、
+                        いろいろな機能が集まっているライブラリであり、「Visual C++」ライブラリによって実装されてるようです。
+                    </p>
+                    <p>
+                        この中にメモリリークの検出機能も入っているようです。
+                    </p>
+                </div>
+                <div id="h2">
+                    <h2>メモリリークの検出方法</h2>
+                    <p>CRTライブラリを使ったメモリ検出方法は簡単。プログラムの終了直前にこの関数を実行するだけ</p>
+                    <div class="code-frame">
+                        <pre>
+<code>// ヘッダーインクルードも忘れずに
+#include &lt;stdlib.h&gt;
+#include &lt;crtdbg.h&gt;
+
+int main()
+{
+    // メモリ確保処理など～
+
+    _CrtDumpMemoryLeaks(); // この一行を追加する
+    return 0;
+}
+</code>
+                        </pre>
+                    </div>
+
+                    <p>メモリリークがあった場合、こんな感じのものが出力ウィンドウに出力される</p>
+
+                    <div class="code-frame">
+                        <pre>
+<code>Detected memory leaks!
+    Dumping objects ->
+    {283} normal block at 0x00000133BC4D8800, 48 bytes long.
+     Data: < 8  3    8  3   > 18 38 FF B4 33 01 00 00 1C 38 FF B4 33 01 00 00 
+Object dump complete.
+</code>
+                        </pre>
+                    </div>
+                    <p>
+                        内容はざっくりいうと、<br>
+                        "0x00000133BC4D8800"というメモリの場所に"48バイト"のメモリリークがあるよ～<br>
+                        データの中身はこんな感じだよ～、みたいな感じ。
+                    </p>
+                </div>
+                <div id="h3">
+                    <h2>メモリリーク箇所のプログラムの特定方法</h2>
+                    <p>メモリのアドレスを言われてもどのプログラムが原因か特定できないので、これを特定する方法がおおむね２つあります。</p>
+                    <div id="h3-1">
+                        <h3>_CrtSetBreakAlloc()関数を使用する</h3>
+                        <p>
+                            メモリ検出メッセージの<br>
+                            {283} normal block at 0x00000133BC4D8800, 48 bytes long.<br>
+                            今回の場合この<strong>283</strong>という数字をこの関数の引数として渡すことで、メモリリークが発生しているプログラムの箇所に<strong>動的にブレークポイントを設定することができます。</strong>
+                        </p>
+                        <div class="code-frame">
+                            <pre>
+<code>// 省略
+int main()
+{
+    _CrtSetBreakAlloc(283); // 必ずプログラムの最初に実行する
+
+    // メモリ確保処理など～
+
+    _CrtDumpMemoryLeaks();
+    return 0;
+}
+</code>
+                            </pre>
+                        </div>
+                    </div>
+                    <div id="h3-2">
+                        <h3>もう一つの方法</h3>
+                        <p>
+                            もう１つの方法として、<strong>メモリリークが疑われるソースコードの先頭行に以下を追加</strong>することでも特定することができます。
+                        </p>
+                        <div class="code-frame">
+                            <pre>
+<code>
+#define _CRTDBG_MAP_ALLOC
+#include &lt;stdlib.h&gt;
+#include &lt;crtdbg.h&gt;
+#define new ::new(_NORMAL_BLOCK, __FILE__, __LINE__)
+</code>
+                        </pre>
+                        </div>
+                        <p>
+                            この方法を使うと、Unityでも見たことのあるようなわかりやすい文で出力してくれます。
+                        </p>
+                        <div class="code-frame">
+                            <pre>
+<code>Detected memory leaks!
+Dumping objects ->
+C:\~path\ball.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes long.
+ Data: <  ,Dx     ,Dx   > E8 B0 2C 44 78 02 00 00 EC B0 2C 44 78 02 00 00 
+</code>
+                        </pre>
+                        </div>
+                        <p>
+                            この場合だと、ball.cppの119行目でメモリが確保されたものが解放されていないですよというメッセージになります。
+                        </p>
+                        <p>
+                            注意すべきなのは、<strong>場所によっては名称エラーが出てしまう</strong>ことがあったので、ものによってはこの方法は使用できない可能性があります。<br>
+                            （もしかしたら僕の使い方が悪かっただけかも？原因が分かり次第追記したいと思います。）
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    メモリ開放は忘れずにしましょう！
+                </p>
+                <div id="h4">
+                    <h2>参考にしたサイト</h2>
+                    <ul>
+                        <li>
+                            <a href="https://learn.microsoft.com/ja-jp/cpp/c-runtime-library/find-memory-leaks-using-the-crt-library?view=msvc-170" class="url">
+                                Microsoft - CRTライブラリを使用したメモリリークの検出
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://learn.microsoft.com/ja-jp/troubleshoot/developer/visualstudio/cpp/libraries/use-rtbreakalloc-debug-memory-allocation" class="url">
+                                Microsoft - _crtBreakAllocを使用してメモリ割り当てをデバッグする
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://qiita.com/sy-takeuchi/items/a9aa2b5d61fe00b97d44" class="url">
+                                Qiita - Visual Studioメモ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>2024/08/27</p>
+                <a class="url" href="/blogs/posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
