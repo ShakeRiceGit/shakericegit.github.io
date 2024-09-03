@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【C++】【基礎】メモリ割り当て・解放について</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="/img/icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blogs/articles/post.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+    <!--Twitter-->
+    <meta name="twitter:card"      content="summary"/>
+    <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+
+    <!--OGP-->
+    <meta property="og:title"       content="【C++】【基礎】メモリ割り当て・解放について"/>
+    <meta property="og:description" content="今回はメモリ確保、解放処理についてメモしておこうと思います..."/>
+    <meta property="og:type"        content="article" />
+    <meta property="og:url"         content="https://shakericegit.github.io/blogs/articles/2024/09/03/post.html"/>
+    <meta property="og:image"       content="https://shakericegit.github.io/blogs/articles/generic/img/head.jpg"/>
+</head>
+
+<body>
+    <script src="/index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1>【C++】【基礎】メモリ割り当て・解放について</h1>
+                <p>
+                    <a href="../../08/26/post.html" class="url">先日のブログ</a>より、今回はメモリ確保、解放処理についてメモしておこうと思います。
+                </p>
+                <div class="contentsList">
+                    <div>目次</div>
+                    <ol>
+                        <li>
+                            <a href="#h1">メモリを確保する方法</a>
+                        </li>
+                        <li>
+                            <a href="#h2">メモリを開放する方法</a>
+                        </li>
+                        <li>
+                            <a href="#h3">例一覧</a>
+                            <ol>
+                                <li><a href="#h3-1">例１）int型ポインタのメモリ確保・解放</a></li>
+                                <li><a href="#h3-2">例２）int型配列のメモリ確保・解放</a></li>
+                                <li><a href="#h3-3">例３）int型配列を"格納する"ポインタ（ポインタ配列）の場合</a></li>
+                                <li><a href="#h3-4">すべてのコード</a></li>
+                            </ol>
+                        </li>
+                        <li>
+                            <a href="#h4">さいごに</a>
+                        </li>
+                    </ol>
+                </div>
+                <div id="h1">
+                    <h2>メモリを確保する方法</h2>
+                    <p>
+                        ポインタへメモリを割り当てる方法は基本的に
+                    </p>
+                    <div class="code-frame">
+<pre>
+<code>
+ポインタ = new ポインタの型;
+
+</code>
+</pre>
+                    </div>
+                    <p>
+                        このような処理で指定した型のサイズ分のメモリを確保することができます。
+                    </p>
+                </div>
+                <div id="h2">
+                    <h2>メモリを開放する方法</h2>
+                    <p>
+                        確保したメモリの領域を解放する方法は
+                    </p>
+                    <div class="code-frame">
+<pre>
+<code>
+delete ポインタ;
+
+</code>
+</pre>
+                    </div>
+                    <p>
+                        このような処理で指定したポインタに割り当てられているメモリを開放することができます。
+                    </p>
+                </div>
+                <div id="h3">
+                    <h2>例一覧</h2>
+                    <div id="h3-1">
+                        <h3>例１）int型ポインタのメモリ確保・解放</h3>
+                        <div class="code-frame">
+<pre>
+<code>
+int* p;
+p = new int;	// int型(4バイト)分のメモリ確保
+
+delete p;       // メモリ解放
+
+</code>
+</pre>
+                        </div>
+                    </div>
+                    <div id="h3-2">
+                        <h3>例２）int型配列のメモリ確保・解放</h3>
+                        <div class="code-frame">
+<pre>
+<code>
+int* array;
+array = new int[5];     // 20バイト（int型4バイト x5）分のメモリ確保
+
+delete[] array;         // メモリ解放
+
+</code>
+</pre>
+                        </div>
+                        <p>
+                            配列に割り当てたメモリを開放する際は<strong>delete[]</strong>を使用します。
+                        </p>
+                    </div>
+                    <div id="h3-3">
+                        <h3>例３）int型配列を"格納するポインタ"（ポインタ配列）の場合</h3>
+                        <div class="code-frame">
+<pre>
+<code>
+// ポインタを格納するための配列（ポインタ配列）
+int* pArray[5];	// ここではメモリ確保はされていない
+
+//初期化処理
+for (int i = 0; i < 5; i++)
+{
+    pArray[i] = new int;    // 4バイトずつメモリ確保し、配列に格納
+}
+
+// メモリ解放処理
+for (int i = 0; i < 5; i++)
+{
+    delete pArray[i];       // 配列の要素1つずつメモリを解放
+}
+
+</code>
+</pre>
+                        </div>
+                    </div>
+
+                    <div id="h3-4">
+                        <h2>すべてのコード</h2>
+                        <div class="code-frame">              
+<pre>
+<code>
+int main()
+{
+    // メモリ確保処理
+
+    int* p;
+    p = new int;                // int型(4バイト)分のメモリ確保
+    
+
+    int* array;
+    array = new int[5];         // 20バイト（int型4バイト x5）分のメモリ確保
+
+    // 初期化処理
+    for (int i = 0; i < 5; i++)
+    {
+        array[i] = 0;
+    }
+
+
+    // ポインタを格納するための配列（ポインタ配列）
+    int* pArray[5];	        // ここではメモリ確保はされていない 
+
+    //初期化処理
+    for (int i = 0; i < 5; i++)
+    {
+        pArray[i] = new int;	// 4バイトずつメモリ確保し、配列に格納
+    }   
+
+
+    // メモリ解放処理
+
+    delete p;
+
+    delete[] array; 
+
+    for (int i = 0; i < 5; i++)
+    {
+    	delete pArray[i];       // 配列の要素1つずつメモリを解放
+    }   
+
+    return 0;
+}
+</code>
+</pre>
+                        </div>
+                    </div>
+                </div>
+                <div id="h4">
+                    <h2>さいごに</h2>
+                    <p>
+                        メモリ解放処理を忘れてしまうと<strong>メモリリーク</strong>が発生してしまい、バグの温床、最悪の場合<strong>PCのフリーズ</strong>などを引き起こしてしまうため、
+                        <strong>絶対に忘れてはいけません。</strong>
+                    </p>
+                    <p>
+                        メモリリークが起きているかどうかを調べてくれるツールもあるので、そちらも活用してみるのもいいでしょう。<br>
+                    </p>
+                    <p>
+                        ↓ブログ記事<br>
+                        <a href="../../08/27/post.html" class="url">CRTライブラリを使用してメモリリークを検出する方法</a>
+                    </p>
+                </div>
+                <p>2024/09/03</p>
+                <a class="url" href="/blogs/posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
