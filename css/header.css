@@ -14,24 +14,21 @@
     margin: 0 auto;
 }
 
-header nav ul li{
+#navigationTop ul li{
     width: 50%;
     text-align: center;
-    
     border-right: 2px solid #ddd;
 }
 
 /*最初のリストだけ左にボーダーをつける*/
-header nav ul li:first-child{
+#navigationTop ul li:first-child{
     border-left: 2px solid #ddd;
 }
 
-header nav ul li a{
+#navigationTop ul li a{
     display: block;
+    padding:  15px 0 15px;
     color: #fff;
-
-    margin: 15px 0 15px;
-
     font-size: large;
     font-weight: bold;
 }
