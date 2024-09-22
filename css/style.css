@@ -42,12 +42,6 @@ body{
     background-color: #dcdcdc;
 }
 
-@media screen and (max-width: 768px) {
-    .content{
-        padding: 0px;
-    }
-}
-
 #innerContent {
     width: 1240px;
     max-width: 100%;
@@ -60,6 +54,6 @@ body{
 
 @media screen and (max-width: 768px) {
     #innerContent{
-        border-style: none;
+        padding: 24px;
     }
 }
