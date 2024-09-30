@@ -1,95 +1,95 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--   created with free sitemap generation system www.sitemapxml.jp   -->
   <url>
-    <loc>http://shakerice.com/</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/jumpandclimb/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/runaway-unitychan/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/invader/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/rocket-side-to-side/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/walk/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/carwars/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>http://shakerice.com/games/drillman/index.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
+<loc>https://shakerice.com/</loc>
+<priority>1.0</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/jumpandclimb/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/runaway-unitychan/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/invader/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/rocket-side-to-side/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/walk/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/carwars/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
+<url>
+<loc>https://shakerice.com/games/drillman/index.html</loc>
+<priority>0.8</priority>
+<lastmod>2024-09-24T18:15:14+09:00</lastmod>
+</url>
   
   <!--Blog-->
   <url>
-    <loc>http://shakerice.com/blogs/posts.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.80</priority>
+    <loc>https://shakerice.com/blogs/posts.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/03/02/post.html</loc>
+    <loc>https://shakerice.com/blogs/articles/2024/03/02/post.html</loc>
     <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/03/06/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/03/06/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/04/21/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/04/21/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/04/28/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/04/28/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/05/04/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/05/04/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/07/21/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/07/21/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/08/26/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/08/26/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/08/27/post.html</loc>
-    <lastmod>2024-08-26T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/08/27/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>http://shakerice.com/blogs/articles/2024/09/03/post.html</loc>
-    <lastmod>2024-09-03T04:01:38+00:00</lastmod>
-    <priority>0.60</priority>
+    <loc>https://shakerice.com/blogs/articles/2024/09/03/post.html</loc>
+    <lastmod>2024-09-24T18:15:14+09:00</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>
