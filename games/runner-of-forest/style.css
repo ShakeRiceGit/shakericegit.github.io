@@ -1,0 +1,87 @@
+.main_block {
+    width: 100%; /* ブロックの幅を設定 */
+    margin: 50px auto; /* ブロックを中央に配置 */
+    background-color: #efefef;
+    padding: 20px;
+}
+
+.main_block .game_icon {
+    float: right;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: -35px;
+}
+@media screen and (max-width: 480px){
+    .main_block .game_icon {
+        width: 125px;
+        height: 125px; /* アイコンの高さを設定 */
+        margin-top: 0px;
+    }
+}
+
+.play .links {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+}
+
+.play .links a{
+    margin-right: 10px;
+}
+
+.play .links a img{
+    width: 200px;
+}
+
+.play .links a .platform-name{
+    text-align: center;
+}
+
+.links #UnityRoom img{
+    padding: 5px;
+    margin: 10px 0 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.container .imgs{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container .imgs img{
+    width: 500px;
+    margin-top: 20px;
+}
+
+.credit h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.credit h4{
+    font-size: 20px;
+}
+
+.credit .credit_content{
+    padding: 1em 0 1em;
+}
+
+.credit .credit_content ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.credit .credit_content ul li{
+    font-size: 20px;
+}
+
+.credit .credit_content ul li p a{
+    text-decoration: underline;
+}
