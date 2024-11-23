@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【DirectX9】【Blender】DirectX9で制作する際の3Dモデル問題について</title>
+    <link rel="icon" type="image/png" href="/img/icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blogs/articles/post.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+    <!--Twitter-->
+    <meta name="twitter:card"      content="summary"/>
+    <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+
+    <!--OGP-->
+    <meta property="og:title"       content="BlenderでXファイルを出力できるようにする"/>
+    <meta property="og:description" content="DirectX9で制作するうえで問題になるのが、3Dモデルの拡張子についてです..."/>
+    <meta property="og:type"        content="article" />
+    <meta property="og:url"         content="https://shakerice.com/blogs/articles/2024/11/23/post.html"/>
+    <meta property="og:image"       content="https://shakerice.com/blogs/articles/generic/img/head.jpg"/>
+
+    <link rel="canonical" href="https://shakerice.com/blogs/articles/2024/09/03/post.html">
+</head>
+
+<body>
+    <script src="/index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1>BlenderでXファイルを出力できるようにする</h1>
+                <p>
+                    DirectX9で制作するうえで問題になるのが、3Dモデルの拡張子についてです。<br>
+                    DirectX9では主に3Dモデルには<strong>Xファイル(.x)</strong>というものを使用することになっています。<br>
+                    ですがこれは昔に使われていた拡張子のものなので、最新のBlenderなどではExportの欄に存在しません。
+                </p>
+                <img src="img/ScreenShot1.jpg" alt="ScreenShot1 Blender Ver4.1">
+                <p>
+                    大昔から使われているソフトなどを使えばXファイルで出力することはできるらしいのですが、
+                </p>
+                <p>
+                    <strong>また新しく3D制作ソフトの動かし方覚えるのめんどい！！！！！！</strong>
+                </p>
+                <p>
+                    <strong>できることなら唯一使えるBlenderでXファイルを出力したい！！！</strong>
+                </p>
+                <p>
+                    というわけで何とか方法を探していたところ、神のアドオンを作ってくれている方を見つけました。
+                </p>
+
+                <div id="h1">
+                    <h2>「Blender_XFileSupport_BVE」を導入する</h2>
+                    <p>
+                        今回はこちらのアドオンを使用します。<br>
+                        <a href="https://github.com/kusaanko/Blender_XFileSupport_BVE" class="url" target="_blank">https://github.com/kusaanko/Blender_XFileSupport_BVE</a>
+                    </p>
+                    <p>
+                        <strong>
+                            ※注意！！！<br>
+                            今回は
+                            <a href="https://www.blender.org/download/releases/3-6/" class="url" target="_blank">Blender3.6</a>、
+                            <a href="https://github.com/kusaanko/Blender_XFileSupport_BVE/releases/tag/v2.2.0" class="url" target="_blank">Blender_XFileSupport_BVE Ver2.2.0</a>
+                            を使用します。<br>
+                        </strong>
+                        現時点(2024/11/23)で最新バージョンのBlender4.1、Blender_XFileSupport_BVE Ver3.2.0で出力すると<strong>テクスチャが反映されない不具合</strong>があるようです。<br>
+                        私が試してみた際に動作が確認できたのが上記のバージョンです。
+                    </p>
+                    <p>
+                        Githubより、「XFileSupport.py」をダウンロードしてきたら、Blenderメニューより、<br>
+                        「Edit」→「Preferences…」→「Add-ons」→「Install…」より、「XFileSupport.py」を選択してアドオンをインストール。
+                        <img src="img/ScreenShot2.jpg" alt="ScreenShot2">
+                    </p>
+                    <p>
+                        すると！「Export」の欄にXファイルが追加されているはずです。<br>
+                        <img src="img/ScreenShot3.jpg" alt="ScreenShot3">
+                    </p>
+                    <p>
+                        追加されていない場合は再起動や、「Add-ons」の欄から、インストールしたアドオンが有効になっているかを確認してください。
+                        <img src="img/ScreenShot4.jpg" alt="ScreenShot4">
+                    </p>
+                    <p>
+                        これにてインストールは完了です。
+                    </p>
+                </div>
+                <p>
+                    出力したファイルはDirectX9で使用することができます。<br>
+                    このブログが誰かの役に立てればいいな！
+                </p>
+                <p>2024/11/23</p>
+                <a class="url" href="/blogs/posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
