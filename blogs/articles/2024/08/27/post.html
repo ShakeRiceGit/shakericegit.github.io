@@ -150,7 +150,7 @@ int main()
                     <div id="h3-2">
                         <h3>もう一つの方法</h3>
                         <p>
-                            もう１つの方法として、<strong>メモリリークが疑われるソースコードの先頭行に以下を追加</strong>することでも特定することができます。
+                            もう１つの方法として、<strong>メモリリークが疑われるソースコードの先頭行に以下のマクロを追加</strong>することでも特定することができます。
                         </p>
                         <div class="code-frame">
                             <pre>
@@ -158,7 +158,7 @@ int main()
 #define _CRTDBG_MAP_ALLOC
 #include &lt;stdlib.h&gt;
 #include &lt;crtdbg.h&gt;
-#define new ::new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 </code>
                         </pre>
                         </div>
@@ -169,7 +169,7 @@ int main()
                             <pre>
 <code>Detected memory leaks!
 Dumping objects ->
-C:\~path\ball.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes long.
+C:\~path\script.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes long.
  Data: <  ,Dx     ,Dx   > E8 B0 2C 44 78 02 00 00 EC B0 2C 44 78 02 00 00 
 </code>
                         </pre>
@@ -186,6 +186,56 @@ C:\~path\ball.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes long
                 <p>
                     メモリ開放は忘れずにしましょう！
                 </p>
+
+                <p>
+                    <strong>追記：2025/02/19</strong>
+                </p>
+                
+                <p>
+                    おそらく原因が判明したので追記します。
+                </p>
+
+                <p>
+                    そもそもこの処理はメモリを確保する際の<strong>「new」</strong>という文にマクロを追加する処理なのですが、<br>
+                    このマクロを追加したヘッダファイル、またはそれをインクルードしたファイルで<strong>別のライブラリをインクルードする</strong>と、<br>
+                    <strong>別ライブラリ内で「new」という文字列を使用した関係ないマクロにまで影響が出て</strong>しまって、コンパイル時に名称エラーが発生してしまうようです。
+                </p>
+                <p>
+                    実際にMicrosoftのドキュメントにも注意書きがありました。<br>
+                    ↓<a href="https://learn.microsoft.com/ja-jp/cpp/c-runtime-library/find-memory-leaks-using-the-crt-library?view=msvc-170#interpret-the-memory-leak-report" class="url" target="_blank">
+                        ドキュメント
+                    </a>より
+                </p>
+
+                <p style="background-color:rgb(223, 223, 223); padding: 0.5em;">
+                    ！注意<br>
+                    new という名前のプリプロセッサ マクロやその他の言語キーワードは作成しないことをお勧めします。
+                </p>
+
+                <p>
+                    解決法については、<strong>自分のプロジェクト用のnamespaceを作成</strong>し、その中で定義して別ライブラリと接触しないようにすれば名称エラーはなくなります。
+                </p>
+                <div class="code-frame">
+                    <pre>
+<code>namespace SampleProject
+{
+    #ifdef _DEBUG   // デバック時にのみ実行
+        #define _CRTDBG_MAP_ALLOC
+        #include &lt;cstdlib&gt;
+        #include &lt;crtdbg.h&gt;
+
+        // メモリリーク箇所を出力するマクロ
+        #define new new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
+    #endif
+}
+</code>
+                </pre>
+                </div>
+
+                <p>
+                    また<strong>「#ifdef _DEBUG」</strong>マクロを使用することによって、Debugビルド時にのみ実行されるようになるためより良くなるでしょう。
+                </p>
+
                 <div id="h4">
                     <h2>参考にしたサイト</h2>
                     <ul>
