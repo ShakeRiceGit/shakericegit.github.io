@@ -169,13 +169,13 @@ int main()
                             <pre>
 <code>Detected memory leaks!
 Dumping objects ->
-C:\~path\script.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes long.
+C:\~path\main.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes long.
  Data: <  ,Dx     ,Dx   > E8 B0 2C 44 78 02 00 00 EC B0 2C 44 78 02 00 00 
 </code>
                         </pre>
                         </div>
                         <p>
-                            この場合だと、ball.cppの119行目でメモリが確保されたものが解放されていないですよというメッセージになります。
+                            この場合だと、「main.cppの119行目でメモリが確保されたものが解放されていないですよ」というメッセージになります。
                         </p>
                         <p>
                             注意すべきなのは、<strong>場所によっては名称エラーが出てしまう</strong>ことがあったので、ものによってはこの方法は使用できない可能性があります。<br>
@@ -233,9 +233,34 @@ C:\~path\script.cpp(119) : {283} normal block at 0x000002784B8EC970, 48 bytes lo
                 </div>
 
                 <p>
+                    また、もし「new」という文字列の入ったマクロを別で使用している場合には、専用の<strong>「newマクロ」</strong>を定義すれば同じく活用できます。<br>
+                    こちらはドキュメントのほうにも紹介されています。
+                </p>
+
+                <div class="code-frame">
+                    <pre>
+<code>namespace SampleProject
+{
+    #ifdef _DEBUG   // デバック時にのみ実行
+        
+        // 省略
+
+        #define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
+    #endif
+
+    //===使用例===================
+
+    int* arr = DBG_NEW int[4];
+}
+</code>
+                </pre>
+                </div>
+
+                <p>
                     また<strong>「#ifdef _DEBUG」</strong>マクロを使用することによって、Debugビルド時にのみ実行されるようになるためより良くなるでしょう。
                 </p>
 
+                
                 <div id="h4">
                     <h2>参考にしたサイト</h2>
                     <ul>
