@@ -1,24 +1,28 @@
+@import url(/css/style.css);
+
 #innerContent{
     min-height: 100vh;
 }
 
 h1{
-    font-size: xx-large;
+    font-size: 28px;
+}
+.title{
+    margin: 8px 0 0;
 }
 
 h2{
     font-size: x-large;
-    color: #364e96;/*文字色*/
-    padding: 0.5em 0;/*上下の余白*/
-    border-top: solid 3px #364e96;/*上線*/
-    border-bottom: solid 3px #364e96;/*下線*/
+    color: #364e96;                         /*文字色*/
+    padding: 0.5em 0;                         /*上下の余白*/
+    border-top: solid 3px #364e96;          /*上線*/
+    border-bottom: solid 3px #364e96;       /*下線*/
 
-    margin-top: 4em;
+    margin-top: 2em;
 }
 
 h3{
-    font-size: x-large;
-
+    font-size: medium;
     padding-bottom: 0.25em;
 
     /*線の種類（二重線）太さ 色*/
@@ -29,15 +33,13 @@ h3{
 }
 
 h4{
-    font-size: x-large;
+    font-size: small;
     margin-top: 1.25em;
     margin-bottom: 1em;
 }
 
 p{
-    font-size: large;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 16px 0;
 }
 
 #innerContent ul li{
@@ -45,9 +47,6 @@ p{
     margin-left: 2em;
 }
 
-.url{
-    font-size: 1.2em;
-}
 
 .url:link{
     color: #0000EE;
