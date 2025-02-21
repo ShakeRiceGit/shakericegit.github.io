@@ -16,14 +16,15 @@ h2{
     font-size: x-large;
     color: #364e96;                         /*文字色*/
     padding: 0.5em 0;                         /*上下の余白*/
+
     border-top: solid 3px #364e96;          /*上線*/
     border-bottom: solid 3px #364e96;       /*下線*/
 
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 h3{
-    font-size: medium;
+    font-size: large;
     padding-bottom: 0.25em;
 
     /*線の種類（二重線）太さ 色*/
@@ -137,4 +138,10 @@ code {
     background: #1d2020;/* 背景色 */
     color: #fff;/* 文字色 */
     font-size: 0.9em;/* 文字サイズ */
-    }
+}
+
+.hilight-box-blue
+{
+    background-color: #9fd8ff;
+    padding: 20px;
+}
