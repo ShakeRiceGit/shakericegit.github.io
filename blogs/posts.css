@@ -2,19 +2,23 @@
     margin: 40px 0 40px;
 }
 
-#posts li{
-    height: 75px;
-
-    border-radius: 10px;
-    border: 3px solid #3A894B;  
-
-    margin: 20px 0 0;
-    padding: 10px 20px;
-}
-
 #posts li a{
     height: 100%;
     display: block;
+    border-radius: 10px;
+    border: 3px solid #3A894B;  
+    margin-top: 20px;
+    padding: 15px 20px;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all  0.3s ease;
+}
+
+/* マウスオーバーした際に背景を暗くする */
+.post:hover {
+    background-color :#dbdbdb;
 }
 
 #posts li .date{
@@ -31,11 +35,6 @@
 }
 
 @media (max-width: 480px) {
-    #posts li{
-        margin: 20px 0 20px;
-        padding: 10px 20px;
-    }
-
     #posts li a h1{
         font-size: 16px;
     }
