@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【C++】マクロについてざっくりまとめてみた</title>
+    <link rel="icon" type="image/png" href="/img/icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/blogs/articles/post.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-QLYEFY6N6C');
+    </script>
+
+    <!--AdSense-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3801471890915858"
+     crossorigin="anonymous"></script>
+
+    <!--Twitter-->
+    <meta name="twitter:card"      content="summary"/>
+    <meta name="twitter:site"      content="@SR_Shake_Rice"/>
+
+    <!--OGP-->
+    <meta property="og:title"       content="【C++】マクロについてざっくりまとめてみた"/>
+    <meta property="og:description" content="DirectX9で制作するうえで問題になるのが、3Dモデルの拡張子についてです..."/>
+    <meta property="og:type"        content="article" />
+    <meta property="og:url"         content="https://shakerice.com/blogs/articles/2025/02/24/post.html"/>
+    <meta property="og:image"       content="https://shakerice.com/blogs/articles/generic/img/head.jpg"/>
+
+    <link rel="canonical" href="https://shakerice.com/blogs/articles/2025/02/24/post.html">
+
+    <style>
+        h2 
+        {
+            margin-top: 3.5em;
+            margin-bottom: 0.7em;
+        }
+
+        ul p 
+        {
+            margin-bottom: 5px;
+        }
+        ul li 
+        {
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="/index.js"></script>
+    <div class="container">
+        <header></header>
+        <div class="content">
+            <div id="innerContent">
+                <h1 class="title">【C++】マクロについてざっくりまとめてみた</h1>
+                <p>
+                    C++言語でプログラミングをするうえでほぼほぼ使うことになるだろうと思う<strong>「マクロ」</strong>について僕なりにざっくりまとめていこうと思います。
+                </p>
+                <p>
+                    ※詳しく解説というよりかは、<strong>なんとなくで理解できる</strong>ようにしているため、言葉足らずなところもあることを理解して読んでいただきたいです。
+                </p>
+                <div id="h1">
+                    <h2>マクロとは</h2>
+                    <p>
+                        マクロとは、超簡単に言うと<strong>”文字を別の文字に置き換える命令”</strong>であり、主に２種類のマクロがあります。<br>
+                    </p>
+                </div>
+                <div id="h2">
+                        <h2>その１：定数マクロ</h2>
+                        <h3>主な書き方</h3>
+                        <div class="code-frame">
+<pre><code>#define マクロ名 置き換える文字
+</code></pre>
+                        </div>
+                        <p>
+                            上のように、<strong>「#define」</strong>によって、右の内容を左のものとして定義することができます。
+                        </p>
+                        <h3>使用例</h3>
+                        <div class="code-frame">
+<pre><code>#include &lt;iostream&gt;	// 文字列出力用
+
+#define NAME "ShakeRice" // 一般的にマクロ名は大文字で書く
+
+// マクロ名に日本語も使える（やっちゃダメ！！）
+#define 挨拶 "こんにちは！！"
+
+int main()
+{
+	printf(NAME);
+	printf("\n"); // 改行用
+	printf(挨拶);
+}
+
+// 出力）
+// ShakeRice
+// こんにちは！！
+</code></pre>
+                        </div>
+                        <p>
+                            さて、C++などを少し触ったことがある方には気づくと思います。<br>
+                            <strong>書き方、使い方自体は「変数」と大体一緒なんです。</strong>
+                        </p>
+                        <p>
+                            では何が違うのか、といいますと、
+                        </p>
+                        <p>
+                            アプリケーションが作られる過程にて、開発者が書いたコードをもとに機械語に変換される「コンパイル」時に挙動が異なります。<br>
+                            実際、コンパイル時には上の例のコードは以下のように変換されています。
+                        </p>
+                        <div class="code-frame">
+<pre><code>//省略
+int main()
+{
+	printf("ShakeRice");
+	printf("\n"); // 改行用
+	printf("こんにちは！！");
+}
+</code></pre>
+                        </div>
+                        <p>
+                            マクロとして定義したものが、コンパイル時にコード内で使用した箇所へ直接割り当てられます。<br>
+                            主な動作としては大体これくらいです。
+                        </p>
+                        <p>
+                            別に変数でもよくね？と思う方もいると思いますが、<br>
+                            実際C++では定数マクロよりも同じ「定数」を扱える<strong>「const」「constexpr」修飾子を使うことが推奨</strong>されています。<br>
+                            できる限りはマクロよりも「const」「constexpr」を使用するほうが良いでしょう。
+                        </p>
+                        <ul>
+                            <p><strong>定数マクロのメリット</strong></p>
+                            <li>型定義が必要ないため、汎用性がある。</li>
+                            <li>実行時にメモリを消費しない。</li>
+                        </ul>
+                        <ul>
+                            <p><strong>定数マクロのデメリット</strong></p>
+                            <li>コンパイル時にコードに直接書き加えられるため、定数名によるデバッグができない</li>
+                            <li>型を定義しないため、バグの温床になる可能性がある。</li>
+                        </ul>
+                        <p>　</p>
+                        <ul>
+                            <p><strong>定数変数のメリット</strong></p>
+                            <li>型を明確に定義する必要があるため、バグの防止につながる。</li>
+                            <li>デバッグが容易。</li>
+                        </ul>
+                        <ul>
+                            <p><strong>定数変数のデメリット</strong></p>
+                            <li>定数変数の型の分だけメモリが消費される。</li>
+                        </ul>
+                        <p>
+                            　
+                        </p>
+                        <p>
+                            ちなみに、「const」と「constexpr」定数の違いを超ざっくりと説明すると、
+                        </p>
+                        <p>
+                            const : 実行時に値が決定される定数。<br> 
+                        </p>
+                        <p>
+                            constexpr : <strong>コンパイル時に値が決定される定数。</strong>
+                        </p>
+                        <p>
+                            となっています。<br>
+                            そのため、現在C++では可能な限り「#define」よりも「constexpr」を使用することが推奨されているようです。
+                        </p>
+                    </div>
+                <div id="h3">
+                    <h2>その２：関数マクロ</h2>
+                    <div class="code-frame">
+<pre><code>#define マクロ名(引数) 処理内容
+</code></pre>
+                    </div>
+                    <h3>使用例</h3>
+                    <div class="code-frame">
+<pre><code> #include &lt;iostream&gt;	// 文字列出力用
+
+// 足し算する関数マクロ
+#define ADD(a, b) (a + b)
+
+// 引き算する関数マクロ
+#define SUB(a, b) (\
+	a - b \
+)
+// バックスラッシュ（\）で改行できる。
+// ただし、バックスラッシュの後には空白やコメントも含め，何も書いてはいけない。
+
+int main()
+{
+	int addValue = ADD(5, 3);
+	printf("%d\n", addValue);
+
+	int subValue = SUB(5, 3);
+	printf("%d\n", subValue);
+}
+
+// 出力）
+// 8
+// 2
+</code></pre>
+                    </div>
+                    <p>
+                        このように普通の関数のように使うことができます。
+                    </p>
+                    <p>
+                        実際この程度の処理ならきちんと関数を作ったほうがいいですが、<br>
+                        よく見かけるのが<strong>「SAFE_RELEASE」</strong>マクロだと思います。
+                    </p>
+                    <div class="code-frame">
+<pre><code> #define SAFE_RELEASE(p) if(p) { delete p; p = nullptr; }
+</code></pre>
+                    </div>
+                    <p>
+                        処理内容は、<strong>「ポインタが存在するとき、ポインタを解放してnullptrにする」</strong>というものになります。<br>
+                    </p>
+                    <p>
+                        このメモリ解放関数は何が便利なのかというと、特に一番は<strong>「どの型のポインタにも対応できる</strong>」ことです。<br>
+                    </p>
+                    <div class="code-frame">
+<pre><code> #include &lt;iostream&gt;	// 文字列出力用
+
+// メモリ解放マクロ
+#define SAFE_RELEASE(p) { delete p; p = nullptr; }
+
+int main()
+{
+	// int型ポインタにメモリを確保
+	int* pIntValue = new int;
+	*pIntValue = 10;
+
+	// float型ポインタにメモリを確保
+	float* pFloatValue = new float;
+	*pFloatValue = 3.14;
+
+	// 値が入っているか確認
+	printf("%d\n", *pIntValue);
+	printf("%f\n", *pFloatValue);
+
+	// マクロでポインタを解放
+	SAFE_RELEASE(pIntValue);
+	SAFE_RELEASE(pFloatValue);
+	
+	if (pIntValue)
+	{
+		// まだポインタが存在する場合、値を出力
+		printf("%d\n", *pIntValue);
+	}
+	else
+	{
+		// 解放済みの場合
+		printf("pIntValueは解放済み\n");
+	}
+
+	if (pFloatValue)
+	{
+		// まだポインタが存在する場合、値を出力
+		printf("%f\n", *pFloatValue);
+	}
+	else
+	{
+		// 解放済みの場合
+		printf("pFloatValueは解放済み\n");
+	}
+}
+
+// 出力）
+// 10
+// 3.140000
+// pIntValueは解放済み
+// pFloatValueは解放済み
+</code></pre>
+                    </div>
+                    <p><strong>”汎用性がある”</strong>のがマクロにおいて特に大きいメリットだと思います。</p>
+                </div>
+                <div id="h4">
+                    <h2>その３：分岐マクロ</h2>
+                    <p>
+                        分岐マクロでは、「そのマクロが定義されているか」によって処理内容を変えることができます。
+                    </p>
+                    <h3>主な書き方</h3>
+                    <div class="code-frame">
+<pre><code>#ifdef BRANCH
+// BRANCH が定義されている場合の処理
+#endif
+
+#ifndef BRANCH
+// BRANCH が定義されていない場合の処理
+#endif
+</code></pre>
+                    </div>
+                    <p>
+                        これらのものは主に、<strong>ビルド時の異なる環境(デバッグ・リリース、WindowsOS・LinuxOSなど)に対応するため</strong>に使われることが多いです。<br>
+                    </p>
+                    <div class="code-frame">
+<pre><code>#include &lt;iostream&gt; // 文字列出力用
+
+int main()
+{
+	int value = 3;
+
+#ifdef _DEBUG
+	printf("value: %d\n", value); // Debugビルド時のみ値が表示される
+#endif // _DEBUG
+
+	// Releaseビルド時は何も表示されない
+}
+</code></pre>
+                    </div>
+                    <p>
+                        このように、VisualStudioのプロジェクト設定によっても変更することができるので、気になる方は分岐マクロをいろいろ調べてみてもいいでしょう。<br>
+                        <a class="url" href="https://learn.microsoft.com/ja-jp/cpp/preprocessor/predefined-macros?view=msvc-170&source=recommendations" target="_blank">「定義済みマクロ」Microsoftドキュメント</a> 
+                    </p>
+                </div>
+                <p>2025/07/21</p>
+                <a class="url" href="/blogs/posts.html">ブログ記事一覧に戻る</a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
