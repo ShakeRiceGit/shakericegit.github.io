@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【C++】マクロについてざっくりまとめてみた</title>
+    <title>【C++】マクロについて簡単にまとめてみた</title>
     <link rel="icon" type="image/png" href="/img/icon.png">
 
     <!--CSS-->
@@ -32,10 +32,10 @@
     <meta name="twitter:site"      content="@SR_Shake_Rice"/>
 
     <!--OGP-->
-    <meta property="og:title"       content="【C++】マクロについてざっくりまとめてみた"/>
-    <meta property="og:description" content="DirectX9で制作するうえで問題になるのが、3Dモデルの拡張子についてです..."/>
+    <meta property="og:title"       content="【C++】マクロについて簡単にまとめてみた"/>
+    <meta property="og:description" content="C++言語でプログラミングをするうえでほぼほぼ使うことになるだろうと思う「マクロ」について僕なりにざっくりまとめていこうと思います..."/>
     <meta property="og:type"        content="article" />
-    <meta property="og:url"         content="https://shakerice.com/blogs/articles/2025/02/24/post.html"/>
+    <meta property="og:url"         content="https://shakerice.com/blogs/articles/2025/07/22/post.html"/>
     <meta property="og:image"       content="https://shakerice.com/blogs/articles/generic/img/head.jpg"/>
 
     <link rel="canonical" href="https://shakerice.com/blogs/articles/2025/02/24/post.html">
@@ -46,15 +46,15 @@
             margin-top: 3.5em;
             margin-bottom: 0.7em;
         }
-
-        ul p 
+        
+        .list
         {
-            margin-bottom: 5px;
+            margin-top: 1.75em;
         }
-        ul li 
+
+        .list li 
         {
-            margin-left: 20px;
-            margin-bottom: 5px;
+            margin-top: 1em;
         }
     </style>
 </head>
@@ -65,13 +65,24 @@
         <header></header>
         <div class="content">
             <div id="innerContent">
-                <h1 class="title">【C++】マクロについてざっくりまとめてみた</h1>
+                <h1 class="title">【C++】マクロについて簡単にまとめてみた</h1>
                 <p>
                     C++言語でプログラミングをするうえでほぼほぼ使うことになるだろうと思う<strong>「マクロ」</strong>について僕なりにざっくりまとめていこうと思います。
                 </p>
                 <p>
                     ※詳しく解説というよりかは、<strong>なんとなくで理解できる</strong>ようにしているため、言葉足らずなところもあることを理解して読んでいただきたいです。
                 </p>
+                <div class="contentsList">
+                    <div>目次</div>
+                    <ol>
+                        <li><a href="#h1">マクロとは</a></li>
+                        <li><a href="#h2">その１：定数マクロ</a></li>
+                        <li><a href="#h3">その２：関数マクロ</a></li>
+                        <li><a href="#h4">その３：分岐マクロ</a></li>
+                        <li><a href="#h5">さいごに</a></li>
+                        <li><a href="#h6">参考サイト</a></li>
+                    </ol>
+                </div>
                 <div id="h1">
                     <h2>マクロとは</h2>
                     <p>
@@ -139,23 +150,23 @@ int main()
                             実際C++では定数マクロよりも同じ「定数」を扱える<strong>「const」「constexpr」修飾子を使うことが推奨</strong>されています。<br>
                             できる限りはマクロよりも「const」「constexpr」を使用するほうが良いでしょう。
                         </p>
-                        <ul>
+                        <ul class ="list">
                             <p><strong>定数マクロのメリット</strong></p>
                             <li>型定義が必要ないため、汎用性がある。</li>
                             <li>実行時にメモリを消費しない。</li>
                         </ul>
-                        <ul>
+                        <ul class ="list">
                             <p><strong>定数マクロのデメリット</strong></p>
                             <li>コンパイル時にコードに直接書き加えられるため、定数名によるデバッグができない</li>
                             <li>型を定義しないため、バグの温床になる可能性がある。</li>
                         </ul>
                         <p>　</p>
-                        <ul>
+                        <ul class ="list">
                             <p><strong>定数変数のメリット</strong></p>
                             <li>型を明確に定義する必要があるため、バグの防止につながる。</li>
                             <li>デバッグが容易。</li>
                         </ul>
-                        <ul>
+                        <ul class ="list">
                             <p><strong>定数変数のデメリット</strong></p>
                             <li>定数変数の型の分だけメモリが消費される。</li>
                         </ul>
@@ -322,7 +333,22 @@ int main()
                         <a class="url" href="https://learn.microsoft.com/ja-jp/cpp/preprocessor/predefined-macros?view=msvc-170&source=recommendations" target="_blank">「定義済みマクロ」Microsoftドキュメント</a> 
                     </p>
                 </div>
-                <p>2025/07/21</p>
+                <div id="h5">
+                    <h2>さいごに</h2>
+                    <p>
+                        今回はマクロを触りたての方に向けて、ざっくりとマクロについてまとめてみました。<br>
+                        おおむね最初のほうに使うであろうものを中心に書いていますので、気になった方はいろんなマクロについて調べるのもいいでしょう。<br>
+                    </p>
+                </div>
+                <div id="h6">
+                    <h2>参考サイト</h2>
+                    <ul>
+                        <li><a class="url" href="https://learn.microsoft.com/ja-jp/cpp/preprocessor/macros-c-cpp?view=msvc-170" target="_blank">Microsoft:「マクロ (C/C++)」</a></li>
+                        <li><a class="url" href="https://qiita.com/Yuzu2yan/items/0e7bcf2e8bc1aa1c030b" target="_blank">C言語のマクロについてまとめる</a></li>
+                        <li><a class="url" href="https://flat-leon.hatenablog.com/entry/cpp_preprocessor" target="_blank">【C++】プリプロセッサの基礎(マクロ編)</a></li>
+                    </ul>
+                </div>
+                <p>2025/07/22</p>
                 <a class="url" href="/blogs/posts.html">ブログ記事一覧に戻る</a>
             </div>
         </div>
