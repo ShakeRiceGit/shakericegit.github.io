@@ -186,6 +186,19 @@ int main()
                             となっています。<br>
                             そのため、現在C++では可能な限り「#define」よりも「constexpr」を使用することが推奨されているようです。
                         </p>
+                        <p>
+                            <strong>おまけ：</strong>
+                        </p>
+                        <div class="code-frame">
+<pre><code>#define NAME "ShakeRice"
+
+// 定義を解除
+#undef NAME
+</code></pre>
+                        </div>
+                        <p>
+                            １度定義したマクロは<strong>「#undef」</strong>を使用することで解除することができます。
+                        </p>
                     </div>
                 <div id="h3">
                     <h2>その２：関数マクロ</h2>
