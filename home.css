@@ -1,62 +1,7 @@
+@import url(/css/index.css);
 
-@media screen and (max-width: 480px) {
-.container_profile .profile_block{
-    display: block;
-}}
-
-.profile_block .profile{
-    display: flex;
-}
-@media screen and (max-width: 480px) {
-.profile_block .profile{
-    display: block;
-}}
-
-.profile_block .profile_title{
-    margin: 0 auto;
-    width: 300px;
-    background: #a5c264;
-    color: white;
-
-    transform: skew(-15deg);
-}
-
-.profile_block .profile_title h2 {
-    text-align: center;
-    font-weight: bold;
-    font-size:  24px;
-    padding: 10px 0px 8px;
-
-    transform: skew(15deg);
-}
-@media screen and (max-width: 480px) {
-.profile_block h2{
-    width: 100%;
-    
-}}
-
-.profile_block .icon{
-    width: 20%;
-    padding-top: 20px;
-    margin: 0 auto;
-}
-
-.profile_block .icon img{
-    max-width: 100%;
-    border-radius: 50%;
-    border: solid 4px #000000;
-}
-
-.profile .profile_description{
-    margin: 20px 20px 0;
-    font-size: 18px;
-}
-
-.container_games{
-    padding-top: 50px;
-}
-
-.container_games .games_title{
+/* ゲーム紹介 */
+#games .title_decoration{
     width: 300px;
     background: #59b4c2;
     color: #fff;
@@ -65,52 +10,28 @@
     transform: skew(-15deg);
 }
 
-.container_games .games_title h2{
+#games .title_decoration .title{
     text-align: center;
     font-weight: bold;
     font-size:  24px;
-    padding: 10px 0px 8px;
     
     transform: skew(15deg);
 }
 
-.container_games .games_block{
+#games .games{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
-}
-@media screen and (max-width: 480px){
-    .container_games .games_block{
-        max-width: 250px;
-        margin: 0 auto;
-        display: block;
-    }
+    justify-content: space-around;
 }
 
-
-/*最後の行のコンテンツを左寄せにする*/
-@media screen and (min-width: 480px){
-    .container_games .games_block::before{
-        content:"";
-        display: block;
-        width: 23%;
-        order:1;
-    }
-    .container_games .games_block::after{
-        content:"";
-        display: block;
-        width: 23%;
-    }
-}
-
-.container_games .game{
+#games .game{
     text-align: center;
     max-width: 200px;
     margin: 30px 20px 40px;
 }
 
-.container_games .game img{
+#games .game img{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -118,13 +39,73 @@
     margin-bottom: 20px;
 }
 
-.container_games .game .title{
+#games .game .title{
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 30px;
 }
-.container_games .game a{
+
+#games .game a{
     background: #59b4c2;
     color: #fff;
     padding: 15px 20px 15px;
+}
+
+/*プロフィール*/
+#profile .title_decoration{
+    margin: 0 auto;
+    width: 300px;
+    background: #a5c264;
+    color: white;
+    transform: skew(-15deg);
+}
+
+#profile .title_decoration .title{
+    text-align: center;
+    font-weight: bold;
+    font-size:  24px;
+    transform: skew(15deg);
+}
+
+.profile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile .icon{
+    max-width: 35%;
+}
+
+.profile .icon img{
+    border-radius: 50%;
+    border: solid 0.25rem #000000;
+}
+
+.profile .profile_description{
+    max-width: 65%;
+    padding: 1.5rem;
+}
+
+/* 959px以下に適用されるCSS（タブレット用） */
+@media screen and (max-width: 959px) {
+
+}
+
+/* 480px以下に適用されるCSS（スマホ用） */
+@media screen and (max-width: 480px) {
+    .profile{
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile .icon{
+        max-width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .profile .profile_description{
+        max-width: 100%;
+    }
 }

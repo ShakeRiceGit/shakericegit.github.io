@@ -1,13 +1,10 @@
-@import url(/css/style.css);
+@import url(/css/index.css);
 
 #innerContent{
     max-width: 820px;
     width: calc(100% - 40px - 300px - 112px);
 }
 
-h1{
-    font-size: 28px;
-}
 .title{
     margin: 8px 0 0;
 }
