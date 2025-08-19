@@ -19,6 +19,10 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-size: 1.6rem;
+}
+
 p {
     font-size: 1rem;
 }
@@ -29,6 +33,7 @@ body{
 
 .mainBack{
     background-color: #dddddd;
+    min-height: 100vh;
 }
 
 .mainWrapper{
