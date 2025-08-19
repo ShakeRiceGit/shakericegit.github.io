@@ -1,5 +1,5 @@
 /*
- * index.js
+ * js/index.js
  * すべてのページで共通の動作を実装するファイル
  */
 
@@ -46,6 +46,14 @@ function InsertContentFromFile(targetSelector, filePath, element)
     })
     .catch(error => console.error('Error fetching content:', error));
 }
+
+window.dataLayer = window.dataLayer || [];
+function gtag()
+{
+  dataLayer.push(arguments);
+}
+gtag('js', new Date()); 
+gtag('config', 'G-QLYEFY6N6C');
 
 // ページのルートパスを取得
 const rootPath = location.origin;
