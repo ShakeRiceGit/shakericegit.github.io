@@ -1,8 +1,11 @@
+@charset "UTF-8";
+@import url(/css/index.css);
+
 .pp_title{
     text-align: center;
 }
 
-.container .pp_title h2 {
+.pp_title .title {
     font-weight: bold;
     font-size:  28px;
     margin: 20px 0 20px;
@@ -11,7 +14,7 @@
     padding: 0 55px;
 }
 
-.pp_title h2:before, .pp_title h2:after {
+.pp_title .title:before, .pp_title .title:after {
     content: '';
     position: absolute;
     top: 50%;
@@ -21,18 +24,9 @@
     background-color: black;
 }
 
-.pp_title h2:before {
+.pp_title .title:before {
     left:0;
 }
-.pp_title h2:after {
+.pp_title .title:after {
     right: 0;
-}
-
-.container .text-box{
-    font-size: 20px;
-    margin: 30px 20px 0;
-}
-
-.text-box ol li{
-    margin-bottom: 1em;
 }

@@ -1,14 +1,21 @@
 @charset "UTF-8";
 @import url(/css/reset.css);
 
+@import url(/css/header.css);
+@import url(/css/footer.css);
+
 html
 {
     font-size: 105%;
     line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3 {
     font-weight: bold;
+}
+
+h1, h2, h3, p{
+    margin-bottom: 1rem;    
 }
 
 h1 {
@@ -27,6 +34,22 @@ p {
     font-size: 1rem;
 }
 
+.ul_default{
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.ol_default{
+    list-style-type: decimal;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+}
+
+.ul_default li, .ol_default li{
+    margin-bottom: 0.5rem;
+}
+
 body{
     font-family: "YakuHanJPs", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
 }
@@ -40,11 +63,14 @@ body{
     width: 1000px;
     max-width:100%;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .content{
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
 }
 
 /* 959px以下に適用されるCSS（タブレット用） */
@@ -58,5 +84,13 @@ body{
 @media screen and (max-width: 480px) {
     html {
         font-size: 62.5%;
+    }
+
+    .mainBack{
+        padding: 1rem 0;
+    }
+
+    .content{
+        border-radius: 0;
     }
 }

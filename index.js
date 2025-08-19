@@ -11,8 +11,6 @@
  */
 function InsertContent(targetSelector, element)
 {
-  console.log(targetSelector);
-  console.log(element);
   if (!element) {
     console.error(`Element <${element}> is null.`);
     return;
