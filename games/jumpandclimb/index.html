@@ -5,55 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JumpAndClimb</title>
     <meta name="description" content="">
-    <link rel="icon" type="image/png" href="../img/icon.png">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
-    <script async src="js/gtag.js"></script>
-
     <link rel="canonical" href="https://shakerice.com/games/jumpandclimb/index.html">
 
     <!--OGP-->
     <meta property="og:title"       content="JumpAndClimb"/>
     <meta property="og:image"       content="https://shakerice.com/games/jumpandclimb/index.html"/>
     <meta property="og:image"       content="https://shakerice.com/games/jumpandclimb/img/icon.png"/>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script async src="/js/gtag.js"></script>
+    <script src="/js/index.js" defer></script>
 </head>
 <body>
-    <script src="/js/index.js"></script>
-    <div class="container">
-        <header></header>
-        <div class="content">
-            <div id="innerContent">
-                <div class="main_block">
+    <header></header>
+    <main class="mainBack">
+        <div class="mainWrapper">
+            <div class="content">
+                <div class="title block">
                     <h1>JumpAndClimb</h1>
-                    <img class="game_icon" src="img/icon.png" alt="icon">
+                    <img class="icon" src="img/icon.png" alt="icon">
                     <div class="play">
-                        <p>Play:</p>
-                        <div class="links">
+                        <section class="links">
                             <a id="GooglePlay" href="https://play.google.com/store/apps/details?id=com.ShakeRice.JumpAndClimb" target="_blank">
-                                <div class="platform-name">Android</div>
                                 <img src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" alt="Google Play で手に入れよう">
                             </a>
-                            <a id="UnityRoom"  href="https://unityroom.com/games/jumpandclimb" target="_blank">
-                                <div class="platform-name">Other</div>
+                            <a id="UnityRoom" href="https://unityroom.com/games/jumpandclimb" target="_blank">
                                 <img src="https://unityroom.com/assets/logo-ffdd89a7b57c7c7c3f39d8fdecbde0f6d2ed33aea6afc1f0c0526f7d3ac4238f.svg" alt="UnityRoomで遊ぶ">
                             </a>
-                        </div>
+                        </section>
                     </div>
                 </div>
-                <div class="imgs">
+                <div class="imgs block">
                     <img src="img/ScreenShot1.jpg" alt="ScreenShot_1">
                     <img src="img/ScreenShot2.jpg" alt="ScreenShot_2">
                     <img src="img/ScreenShot3.jpg" alt="ScreenShot_3">
                     <img src="img/ScreenShot4.jpg" alt="ScreenShot_4">
                     <img src="img/ScreenShot5.jpg" alt="ScreenShot_5">
                 </div>
-                <div class="about">
+                <div class="about block">
                     <h2>About:</h2>
                     <p>
                         初めてUnityを触ってから初めて作ったゲーム。<br>
@@ -65,108 +57,115 @@
                         初リリース日：2021/08/06
                     </p>
                 </div>
-                <div class="info">
-                    <div class="info_left">
-                        <div class="release" id="ReleaseNote">
-                            <h3>ReleaseNote:</h3>
-                            <!--Latest-->
-                            <details><summary>Ver5.1.1</summary>
-                                <ul>
-                                    <li>表示名を変更しても保存されない不具合の修正</li>
-                                </ul>
-                            </details>
-                            <details><summary>Ver5.1</summary>
-                                <ul>
-                                    <li>60FPSに対応</li>
-                                </ul>
-                            </details>
-                            <details><summary>Ver5.0</summary>
-                                <ul>
-                                    <li>新アイテムを追加</li>
-                                    <li>BGM(nyanko)を追加</li>
-                                    <li>ログインシステムの削除</li>
-                                    <li>いつでもランキング表示名を変更可能</li>
-                                    <li>ランキング表示数を10→50に増加</li>
-                                    <li>ゲームバランスの調整</li>
-                                </ul>
-                            </details>
-
-                            <!--Ver4.0-->
-                            <details><summary>Ver4.0</summary>
-                                <ul>
-                                    <li>新アイテムを追加</li>
-                                    <li>BGMを追加</li>
-                                    <li>設定項目の追加</li>
-                                    <li>アカウント機能の追加</li>
-                                    <li>ゲームバランスの調整</li>
-                                    <li>ランキング形式の変更</li>
-                                </ul>
-                            </details>
-
-                            <!--Ver3.0-->
-                            <details><summary>Ver3.1.0</summary>
-                                <ul>
-                                    <li>設定項目にリリースノートへのリンクを追加</li>
-                                </ul>
-                            </details>
-                            <details><summary>Ver3.0.1</summary>
-                                <ul>
-                                    <li>APIの更新</li>
-                                </ul>
-                            </details>
-                            <details><summary>Ver3.0</summary>
-                                <ul>
-                                    <li>アプリ内にプライバシー・ポリシーへのページリンクを追加</li>
-                                    <li>"Clock"の出現率の増加</li>
-                                    <li>ランキングのリセット</li>
-                                </ul>
-                            </details>
-                            
-                            <!--Ver2.0-->
-                            <details><summary>Ver2.1</summary>
-                                <ul>
-                                    <li>広告が表示されない不具合の改善</li>
-                                </ul>
-                            </details>
-                            <details><summary>Ver2.0</summary>
-                                <ul>
-                                    <li>タイトル画面の追加</li>
-                                    <li>プレイヤーとカメラとの距離を調整できる機能を追加</li>
-                                    <li>オブジェクト数の増加</li>
-                                    <li>広告の実装(GooglePlayからインストールしているアプリのみ)<br>
-                                    ※広告が表示されない不具合が発生</li>
-                                </ul>
-                            </details>
-
-                            <!--Ver1.0-->
-                            <details><summary>Ver1.1</summary>
-                                <ul>
-                                    <li>ゲーム内のボタンが押せない不具合を改善</li>
-                                </ul>
-                            </details>
-                            <details><summary>Ver1.0</summary>
-                                <ul>
-                                    <li>初回リリース</li>
-                                </ul>
-                            </details>
-                        </div>
+                <div class="info block">
+                    <div class="element block credit" id="Credit">
+                        <h3>Credit:</h3>
+                        <p><strong>BGM:(曲名 / 作曲者名)</strong></p>
+                        <ul>
+                            <li><p>title / <a href="https://x.com/musicGuitar901" class="url underline" target="_blank">鯛鯛</a></p></li>
+                            <li><p>Keep climbing! / <a href="https://x.com/musicGuitar901" class="url underline" target="_blank">鯛鯛</a></p></li>
+                            <li><p>8bit beat / <a href="https://x.com/musicGuitar901" class="url underline" target="_blank">鯛鯛</a></p></li>
+                            <li><p>nyanko / <a href="https://x.com/musicGuitar901" class="url underline" target="_blank">鯛鯛</a></p></li>
+                        </ul>
                     </div>
-                    <div class="info_right">
-                        <div class="credit" id="Credit">
-                            <h3>Credit:</h3>
-                            <strong>BGM:(曲名 / 作曲者名)</strong>
+                    <div class="element block release" id="ReleaseNote">
+                        <h3>ReleaseNote:</h3>
+                        <!--Latest-->
+                        <details>
+                            <summary>Ver 5.1.1</summary>
                             <ul>
-                                <li><p>title / <a href="https://x.com/musicGuitar901" target="_blank">鯛鯛</a></p></li>
-                                <li><p>Keep climbing! / <a href="https://x.com/musicGuitar901" target="_blank">鯛鯛</a></p></li>
-                                <li><p>8bit beat / <a href="https://x.com/musicGuitar901" target="_blank">鯛鯛</a></p></li>
-                                <li><p>nyanko / <a href="https://x.com/musicGuitar901" target="_blank">鯛鯛</a></p></li>
+                                <li>表示名を変更しても保存されない不具合の修正</li>
                             </ul>
-                        </div>
+                        </details>
+                        <details>
+                            <summary>Ver 5.1</summary>
+                            <ul>
+                                <li>60FPSに対応</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Ver 5.0</summary>
+                            <ul>
+                                <li>新アイテムを追加</li>
+                                <li>BGM(nyanko)を追加</li>
+                                <li>ログインシステムの削除</li>
+                                <li>いつでもランキング表示名を変更可能</li>
+                                <li>ランキング表示数を10→50に増加</li>
+                                <li>ゲームバランスの調整</li>
+                            </ul>
+                        </details>
+
+                        <!--Ver4.0-->
+                        <details>
+                            <summary>Ver 4.0</summary>
+                            <ul>
+                                <li>新アイテムを追加</li>
+                                <li>BGMを追加</li>
+                                <li>設定項目の追加</li>
+                                <li>アカウント機能の追加</li>
+                                <li>ゲームバランスの調整</li>
+                                <li>ランキング形式の変更</li>
+                            </ul>
+                        </details>
+
+                        <!--Ver3.0-->
+                        <details>
+                            <summary>Ver 3.1.0</summary>
+                            <ul>
+                                <li>設定項目にリリースノートへのリンクを追加</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Ver 3.0.1</summary>
+                            <ul>
+                                <li>APIの更新</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Ver 3.0</summary>
+                            <ul>
+                                <li>アプリ内にプライバシー・ポリシーへのページリンクを追加</li>
+                                <li>"Clock"の出現率の増加</li>
+                                <li>ランキングのリセット</li>
+                            </ul>
+                        </details>
+                        
+                        <!--Ver2.0-->
+                        <details>
+                            <summary>Ver 2.1</summary>
+                            <ul>
+                                <li>広告が表示されない不具合の改善</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Ver 2.0</summary>
+                            <ul>
+                                <li>タイトル画面の追加</li>
+                                <li>プレイヤーとカメラとの距離を調整できる機能を追加</li>
+                                <li>オブジェクト数の増加</li>
+                                <li>広告の実装(GooglePlayからインストールしているアプリのみ)<br>
+                                ※広告が表示されない不具合が発生</li>
+                            </ul>
+                        </details>
+
+                        <!--Ver1.0-->
+                        <details>
+                            <summary>Ver 1.1</summary>
+                            <ul>
+                                <li>ゲーム内のボタンが押せない不具合を改善</li>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary>Ver 1.0</summary>
+                            <ul>
+                                <li>初回リリース</li>
+                            </ul>
+                        </details>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <footer></footer>
 </body>
 </html>

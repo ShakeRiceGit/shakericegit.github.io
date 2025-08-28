@@ -34,6 +34,18 @@ p {
     font-size: 1rem;
 }
 
+underline, .underline{
+    text-decoration: underline;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.color_red{
+    color: #ff0000;
+}
+
 .ul_default{
     list-style-type: disc;
     padding-left: 1.5rem;
@@ -50,6 +62,20 @@ p {
     margin-bottom: 0.5rem;
 }
 
+.url{
+    font-size: 1rem;
+    color: #31bbbb;
+}
+
+.url:hover{
+    text-decoration: underline;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 body{
     font-family: "YakuHanJPs", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
 }
@@ -63,7 +89,7 @@ body{
     width: 1000px;
     max-width:100%;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 
 .content{
@@ -73,24 +99,18 @@ body{
     border-radius: 0.5rem;
 }
 
+.block{
+    margin-bottom: 2rem;
+}
+
 /* 959px以下に適用されるCSS（タブレット用） */
 @media screen and (max-width: 959px) {
-	html {
-        font-size: 75%;
-    }
 }
 
 /* 480px以下に適用されるCSS（スマホ用） */
 @media screen and (max-width: 480px) {
-    html {
-        font-size: 62.5%;
-    }
-
-    .mainBack{
-        padding: 1rem 0;
-    }
-
     .content{
         border-radius: 0;
+        padding: 2rem 1rem;
     }
 }
