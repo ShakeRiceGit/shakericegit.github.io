@@ -7,16 +7,7 @@
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="../img/icon.png">
 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/games/games.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
-    <script async src="js/gtag.js"></script>
 
     <link rel="canonical" href="https://shakerice.com/games/rocket-side-to-side/index.html">
 
@@ -24,40 +15,43 @@
     <meta property="og:title"       content="Rocket side-to-side"/>
     <meta property="og:image"       content="https://shakerice.com/games/rocket-side-to-side/index.html"/>
     <meta property="og:image"       content="https://shakerice.com/games/rocket-side-to-side/img/icon.png"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script async src="js/gtag.js"></script>
+
+    <script src="/js/index.js"></script>
 </head>
 <body>
-    <script src="/js/index.js"></script>
-    <div class="container">
-        <header></header>
-        <div class="content">
-            <div id="innerContent">
-                <div class="main_block">
+    <header></header>
+    <main class="mainBack">
+        <div class="mainWrapper">
+            <div class="content">
+                <div class="title block">
                     <h1>Rocket side-to-side</h1>
-                    <img class="game_icon" src="img/icon.png" alt="icon">
+                    <img class="icon" src="img/icon.png" alt="icon">
                     <div class="play">
-                        <p>Play:</p>
-                        <div class="links">
+                        <section class="links">
                             <a id="UnityRoom"  href="https://unityroom.com/games/rocket_side-to-side" target="_blank">
-                                <div class="platform-name">PC(スマホ対応)</div>
                                 <img src="https://unityroom.com/assets/logo-ffdd89a7b57c7c7c3f39d8fdecbde0f6d2ed33aea6afc1f0c0526f7d3ac4238f.svg" alt="UnityRoomで遊ぶ">
                             </a>
-                        </div>
+                        </section>
                     </div>
                 </div>
             
-                <div class="imgs">
+                <div class="imgs block">
                     <img src="img/ScreenShot1.png" alt="img1">
                     <img src="img/ScreenShot2.png" alt="img2">
                     <img src="img/ScreenShot3.png" alt="img3">
                     <img src="img/ScreenShot4.png" alt="img4">
                 </div>
-                <div id="rule">
+                <div id="rule" class="block">
                     <h2>ゲームルール:</h2>
                     <p>
                         隕石に当たらないようによけながらスコアを上げるエンドレスゲーム
                     </p>
                 </div>
-                <div id="control">
+                <div id="control" class="block">
                     <h2>操作方法:</h2>
                     <table>
                         <tbody>
@@ -68,7 +62,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div id="about">
+                <div id="about" class="block">
                     <h2>About:</h2>
                     <p>
                         初めてUniRxを使った実装に挑戦してみたゲーム。<br>
@@ -79,7 +73,7 @@
                         リリース日：2023/10/27
                     </p>
                 </div>
-                <div class="info">
+                <div class="info block">
                     <div id ="UseAssets">
                         <h3>使用したアセット:</h3>
                                 <h4>BGM・SE</h4>
@@ -91,7 +85,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <footer></footer>
 </body>
 </html>
