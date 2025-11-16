@@ -6,6 +6,15 @@
     padding: 1rem 2rem;
 }
 
+@media screen and (max-width: 480px) {
+    .title {
+        position: initial;
+        text-align: center;
+        background-color: #efefef;
+        padding: 0;
+    }
+}
+
 .title .icon{
     position: absolute;
     top: 1rem;
@@ -17,8 +26,16 @@
     border-radius: 0.5rem;
 }
 
+@media screen and (max-width: 480px) {
+    .title .icon{
+        position: initial;
+        width: 5rem;
+    }
+}
+
 .title .play{
     text-align: center;
+    padding: 1rem 0;
 }
 
 .play .links {
@@ -26,8 +43,15 @@
     align-items: center;
 }
 
-.play .links a{
-    width: 25%;
+.play .links a {
+    display: block;
+    height: 4rem;
+    margin: 0 1rem;
+}
+
+.play .links a img{
+    object-fit: contain;
+    height: 100%;
 }
 
 .play .links a .platform{
@@ -38,6 +62,9 @@
     display: inline-flex;
     border: solid 6px #000;
     border-radius: 0.5rem;
+}
+
+#UnityRoom  img{
     padding: 0.25rem;
 }
 
