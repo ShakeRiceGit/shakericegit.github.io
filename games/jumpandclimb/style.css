@@ -1,150 +1,48 @@
-.main_block {
-    width: 100%; /* ブロックの幅を設定 */
-    margin: 0px auto; /* ブロックを中央に配置 */
-    background-color: #efefef;
-    padding: 20px;
-}
+@import url(/games/games.css);
 
-.main_block .game_icon {
-    float: right;
-    height: 150px; /* アイコンの高さを設定 */
-    object-fit: cover;
-    border-radius: 10px;
-    margin-top: -35px;
-}
-
-@media screen and (max-width: 480px){
-    .main_block .game_icon {
-        width: 125px;
-        height: 125px; /* アイコンの高さを設定 */
-        margin-top: 25px;
-    }
-}
-
-.play .links {
-    display: flex;
-    flex-wrap: wrap;
-    text-decoration: none;
-    color: black;
-}
-
-.play .links a{
-    margin-right: 10px;
-}
-
-.play .links a img{
-    width: 200px;
-}
-
-.play .links a .platform-name{
-    text-align: center;
-}
-
-.links #UnityRoom img{
-    padding: 5px;
-    margin: 10px 0 10px;
-    border: 5px solid black;
-    border-radius: 10px;
-}
-
-.container .imgs{
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.container .imgs img{
-    max-width: 200px;
-    margin-top: 20px;
-}
-
-.container .about{
-    margin-top: 20px;
-}
-
-.about p{
-    margin-top: 10px;
-}
-
-.container .info{   
+.info {
     display: flex;
 }
-@media screen and (max-width: 480px) {
-    .container .info{
-        display: block;
-    }
+
+.info .element{
+    width: 100%;
+    padding: 0 1rem;
 }
 
-.container .info div{
-    margin-top: 20px;
+.credit ul{
+    list-style-type: disc;
+    padding-left: 1rem;
 }
 
-.container .info .info_left{
-    width: 50%;
-    padding-right: 10px;
-}
-@media screen and (max-width: 480px) {
-    .container .info .info_left{
-        width: 100%;
-    }
-}
-
-
-.info_left h3{
-    margin-bottom: 10px;
-}
-
-.info_left .release details summary{
-    margin-top: 0.5rem;
+.release details{
+    font-size: 1rem;
+    padding: 0 0 0 1rem;
+    background-color: #fff;
     cursor: pointer;
-    background-color: #dfdfdf;
-    padding: 5px 10px 5px;
+    border: #80BD8D 2px solid;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .release details summary{
-    font-size: 18px;
     font-weight: bold;
 }
 
 .release details ul{
-    list-style: disc;
-    margin-top: 0.5rem;
-    padding-left: 40px;
-}
-
-.container .info_right{
-    width: 50%;
-    padding-left: 10px;
-}
-@media screen and (max-width: 480px) {
-    .container .info .info_right{
-        width: 100%;
-    }
-}
-
-
-.info_right .credit h3{
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.credit h4{
-    font-size: 20px;
-}
-
-.credit ul{
-    margin-top: 10px;
     list-style-type: disc;
-    padding-left: 20px;
+    padding: 0.5rem 0 0.5rem 1.3rem;
 }
 
-.credit ul li{
-    font-size: 20px;
-    margin-top: 5px;
-}
+@media screen and (max-width: 480px){
+    .info{
+        display: block;
+    }
 
-.credit ul li p a{
-    text-decoration: underline;
+    .info .element{
+        padding: 0;
+    }
+
+    .release details{
+        padding: 1rem;
+    }
 }

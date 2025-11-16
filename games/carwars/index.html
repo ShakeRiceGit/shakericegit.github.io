@@ -7,22 +7,7 @@
     <meta name="description" content="">
     <link rel="icon" type="image/png" href="../img/icon.png">
 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/games/games.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-QLYEFY6N6C');
-    </script>
 
     <link rel="canonical" href="https://shakerice.com/games/carwars/index.html">
 
@@ -30,28 +15,31 @@
     <meta property="og:title"       content="CarWars"/>
     <meta property="og:image"       content="https://shakerice.com/games/carwars/index.html"/>
     <meta property="og:image"       content="https://shakerice.com/games/carwars/img/icon.png"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script async src="js/gtag.js"></script>
+
+    <script src="/js/index.js"></script>
 </head>
 <body>
-    <script src="/index.js"></script>
-    <div class="container">
-        <header></header>
-        <div class="content">
-            <div id="innerContent">
-                <div class="main_block">
+    <header></header>
+    <main class="mainBack">
+        <div class="mainWrapper">
+            <div class="content">
+                <div class="title block">
                     <h1>CarWars</h1>
-                    <img class="game_icon" src="img/icon.png" alt="icon">
+                    <img class="icon" src="img/icon.png" alt="icon">
                     <div class="play">
-                        <h2>Download:</h2>
-                        <div class="links">
+                        <section class="links">
                             <a id="Github" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/CarWars" target="_blank">
-                                <div class="platform-name">PC only</div>
                                 <img src="/img/github-mark.svg">
                             </a>
-                        </div>
+                        </section>
                     </div>
                 </div>
             
-                <div class="imgs">
+                <div class="imgs block">
                     <img src="img/ScreenShot1.png" alt="img1">
                     <img src="img/ScreenShot2.png" alt="img2">
                     <img src="img/ScreenShot3.png" alt="img3">
@@ -64,7 +52,7 @@
                         一番多くの敵を倒した人が勝ち、というFFA形式のゲーム。
                     </p>
                 </div>
-                <div id="control">
+                <div id="control" class="block">
                     <h2>操作方法:</h2>
                     <table>
                         <tbody>
@@ -103,7 +91,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div id="about">
+                <div id="about" class="block">
                     <h2>About:</h2>
                     <p>
                         2022年11月まで半年近くかけて作っていたゲーム。<br>
@@ -118,7 +106,8 @@
                     </p>
             </div>
         </div>
-    </div>
+        </div>
+    </main>
     <footer></footer>
 </body>
 </html>

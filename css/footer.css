@@ -1,53 +1,60 @@
-@import url(style.css);
+@import url(index.css);
 
-footer{
-    background: #3A894B;
+.footerBack{
+    background-color: #3A3C3C;
 }
 
-#innerFooter{
-    max-width: 1240px;
+.footerWrapper {
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
-
     color: #fff;
 }
 
-.SNS{
-    padding: 10px;
-}
-
-.SNS a .SNSicon{
-    max-width: 50px;
-    margin: 0 10px 0;
-}
-
-.footerMenu{
-    width: 50%;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.footerMenu ul{
+.nav_footer ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-@media screen and (max-width: 480px) {
-    .footerMenu ul{
-        display: block;
-    }
+.nav_footer ul li{
+    width: 50%;
 }
 
-.footerMenu ul li{
-    width: 33%;
+.nav_footer ul li a{
+    display: block;
+    padding: 1rem;
+    text-align: center;
 }
-@media screen and (max-width: 480px) {
-    .footerMenu ul li{
-        width: 100%;
-    }
+
+.nav_footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.mail a:hover{
+    text-decoration: underline;
+}
+
+.SNS{
+    display: flex;
+}
+
+.SNS a{
+    width: 3rem;
+    margin: 0 0.5rem;
+}
+
+.SNS a img{
+    width: 100%;
 }
 
 .copy{
-    font-size: 12px;
+    font-size: 0.75rem;
     padding:  10px 0 10px;
+    text-align: center;
 }
