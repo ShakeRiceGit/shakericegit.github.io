@@ -1,0 +1,28 @@
+@import url(/games/games.css);
+
+.credit h3{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.credit h4{
+    font-size: 20px;
+}
+
+.credit .credit_content{
+    padding: 1em 0 1em;
+}
+
+.credit .credit_content ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.credit .credit_content ul li{
+    font-size: 20px;
+}
+
+.credit .credit_content ul li p a{
+    text-decoration: underline;
+}
