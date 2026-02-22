@@ -43,13 +43,13 @@
     color: #a5c264;
 }
 
-.games .game{
+.games .element{
     text-align: center;
     max-width: 200px;
     margin: 30px 20px 40px;
 }
 
-.games .game img{
+.games .element img{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -57,13 +57,13 @@
     margin-bottom: 20px;
 }
 
-.games .game .title{
+.games .element .title{
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 30px;
 }
 
-.games .game a{
+.games .element a{
     background: #59b4c2;
     color: #fff;
     padding: 15px 20px 15px;
