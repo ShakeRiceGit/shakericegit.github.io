@@ -1,7 +1,7 @@
 @import url(/css/index.css);
 
 /* ゲーム紹介 */
-#games .title_decoration{
+.title_decoration{
     width: 300px;
     background: #59b4c2;
     color: #fff;
@@ -10,7 +10,7 @@
     transform: skew(-15deg);
 }
 
-#games .title_decoration .title{
+.title_decoration .title{
     text-align: center;
     font-weight: bold;
     font-size:  24px;
@@ -18,20 +18,53 @@
     transform: skew(15deg);
 }
 
-#games .games{
+.games{
     margin: 0 auto;
+}
+
+.elements{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#games .game{
+.year{
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+.year h1{
+    position: relative;     /*相対位置*/
+    line-height: 1.4;       /*行高*/
+    font-size: 2rem;
+
+    padding: 0 2rem 0;
+    margin-bottom: 0;       /*下の余白をなくす*/
+}
+
+.year h1::before{
+    font-weight: bold;
+    font-size: 1.4em;   /*サイズ*/
+    margin-left: 0.2em; /* 文字との余白 */
+}
+
+.year h1::after{
+    background-color: #a5c264; /* 横線の色 */
+    content: "";
+    height: 0.2rem; /* 横線の高さ */
+    align-items: center; /* 横線を上下中央 */
+    display: flex; /* 文字と横線を横並び */
+}
+
+
+.element{
     text-align: center;
     max-width: 200px;
     margin: 30px 20px 40px;
 }
 
-#games .game img{
+
+.element img{
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -39,13 +72,13 @@
     margin-bottom: 20px;
 }
 
-#games .game .title{
+.element .title{
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 30px;
 }
 
-#games .game a{
+.element a{
     background: #59b4c2;
     color: #fff;
     padding: 15px 20px 15px;

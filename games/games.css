@@ -79,7 +79,11 @@
 }
 
 #control table tr:nth-child(odd){
-    background-color: #eee
+    background-color: #eeeeee
+}
+
+#control table tr:nth-child(even){
+    background-color: #f8f8f8
 }
 
 /* 480px以下に適用されるCSS（スマホ用） */
