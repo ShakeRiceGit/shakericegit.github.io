@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Hop Cross</title>
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="img/icon.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="canonical" href="https://shakerice.com/games/skyhopcross/index.html">
+
+    <!--OGP-->
+    <meta property="og:title"       content="Sky Hop Cross"/>
+    <meta property="og:image"       content="https://shakerice.com/games/skyhopcross/index.html"/>
+    <meta property="og:image"       content="https://shakerice.com/games/skyhopcross/img/icon.png"/>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QLYEFY6N6C"></script>
+    <script async src="js/gtag.js"></script>
+
+    <script src="/js/index.js"></script>
+</head>
+<body>
+    <header></header>
+    <main class="mainBack">
+        <div class="mainWrapper">
+            <div class="content">
+                <div class="title block">
+                    <h1>Sky Hop Cross</h1>
+                    <img class="icon" src="img/icon.png" alt="icon">
+                    <div class="play">
+                        <section class="links">
+                            <a id="Github" href="https://github.com/ShakeRiceGit/shakericegit.github.io/releases/tag/SkyHopCross" target="_blank">
+                                <img src="/img/github-mark.svg">
+                            </a>
+                        </section>
+                    </div>
+                </div>
+                <div class="imgs block">
+                    <img src="img/ScreenShot1.png" alt="img1">
+                    <img src="img/ScreenShot2.png" alt="img2">
+                    <img src="img/ScreenShot3.png" alt="img3">
+                </div>
+                <div id="control" class="block">
+                    <h2>操作方法</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>移動</th>
+                                <td>WASD</td>
+                            </tr>    
+                            <tr>
+                                <th>走る</th>
+                                <td>LShift + WASD</td>
+                            </tr>   
+                            <tr>
+                                <th>視点操作</th>
+                                <td>マウス操作</td>
+                            </tr>   
+                            <tr>
+                                <th>ジャンプ</th>
+                                <td>Space</td>
+                            </tr>   
+                            <tr>
+                                <th>リトライ</th>
+                                <td>R</td>
+                            </tr>   
+                            <tr>
+                                <th>タイトルに戻る</th>
+                                <td>Esc</td>
+                            </tr>   
+                        </tbody>
+                    </table>
+                </div>
+                <div id="about" class="block">
+                    <h2>About:</h2>
+                    <p>
+                        DirectX9を用いて、フレームワークから構築した２作目のゲーム。<br>
+                        前回の<a href="/games/breakout/index.html" class="url">ブロック崩し</a>とは違い今回は完全3Dのゲームなので、カメラ操作、ライティングにまできちんと処理を実装しました。<br>
+                        特に一番苦労した点は、<strong>「分離軸判定」を用いた３次元の衝突判定、物理的挙動、そしてそれらの兼ね合い</strong>の実装でした。<br>
+                        仕組みを理解し、実装することができたため、次回DirectX11や12を勉強した際に経験を生かしてよりグレードアップしたゲームを作れるだろうと思っています。
+                    </p>
+                    <p>
+                        <br>
+                        制作環境：DirectX9<br>
+                        制作期間：約３か月半(2025/10/23 ~ 2026/02/09)<br>
+                    </p>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
